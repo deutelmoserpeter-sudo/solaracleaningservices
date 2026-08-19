@@ -111,6 +111,7 @@ function CleanerApplicationPage() {
               <label>Reliable transportation<select name="transportation" required defaultValue=""><option value="" disabled>Select an answer</option><option>Yes</option><option>No</option></select></label>
               <label className="full-field">What do you believe is most important when providing a high-quality cleaning service?<textarea name="service-quality" rows={5} required placeholder="Share what high-quality service means to you..." /></label>
               <label className="full-field consent-field"><input type="checkbox" name="work-authorization" value="Yes" required /><span>I confirm that I am authorized to work in the United States and that the information provided is accurate.</span></label>
+              <label className="full-field consent-field"><input type="checkbox" name="background-check-consent" value="Yes" required /><span>I acknowledge and consent to a background check as part of the application process with Solara Cleaning Services.</span></label>
             </div>
             <button className="button button-dark form-button" type="submit" disabled={formStatus === 'sending'}>
               {formStatus === 'sending' ? 'Sending your application...' : 'SUBMIT APPLICATION'} <ArrowRight size={18} />

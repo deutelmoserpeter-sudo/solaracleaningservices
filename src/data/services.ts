@@ -106,7 +106,7 @@ export const services: CleaningService[] = [
     intro: 'The detailed final clean that turns a completed project into a finished, move-ready space.',
     description: 'Construction can leave fine dust in places ordinary cleaning can miss. We methodically clean surfaces, fixtures, floors, ledges, and cabinetry so the craftsmanship can shine and the space feels ready to use.',
     idealFor: 'Homeowners, contractors, remodelers, designers, and property professionals completing a project.',
-    image: '/images/clean-home.jpg',
+    image: '/images/construction-site.jpg',
     icon: HardHat,
     includes: ['Fine construction dust removed from accessible surfaces', 'Cabinets, drawers, shelves & ledges cleaned', 'Baseboards, trim, doors & frames wiped down', 'Fixtures, countertops & finished surfaces cleaned', 'Floors thoroughly vacuumed and mopped', 'Interior/exterior windows, glass & mirrors cleaned', 'Bathrooms & kitchens detailed', 'Light switches, outlets & door handles cleaned', 'Vents, sills & other reachable detail areas dusted', 'Light construction debris & leftover materials removed'],
     quoteNotice: 'Post Construction Cleans can be very particular so we want to get you the most accurate price possible.',
