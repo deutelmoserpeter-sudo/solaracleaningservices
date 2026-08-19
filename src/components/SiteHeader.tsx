@@ -50,6 +50,7 @@ export function SiteHeader() {
         <a href="/about" onClick={closeMenu}>About</a>
         <a href="/#reviews" onClick={closeMenu}>Reviews</a>
         <a href="/faq" onClick={closeMenu}>FAQ</a>
+        <a href="/apply" onClick={closeMenu}>Join Our Team</a>
         <a className="mobile-quote" href="/#quote" onClick={closeMenu}>BOOK NOW <ArrowRight size={17} /></a>
         <a className="mobile-phone" href="tel:+17274333048" onClick={closeMenu}><Phone size={18} /> (727)-433-3048</a>
       </nav>
