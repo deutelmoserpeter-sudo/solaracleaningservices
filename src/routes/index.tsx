@@ -162,13 +162,15 @@ function HomePage() {
           <div className="service-list">
             {services.map((service) => (
               <a className="service-card" href={`/services/${service.slug}`} key={service.number}>
-                <span className="service-number">{service.number}</span>
-                <div>
-                  <p className="service-note">{service.note}</p>
+                <div className="service-card-top">
+                  <span className="service-number">{service.number}</span>
+                  <span className="service-card-arrow" aria-hidden="true"><ArrowRight /></span>
+                </div>
+                <div className="service-card-copy">
+                  <p className="service-note"><span>{service.note}</span></p>
                   <h3>{service.shortTitle}</h3>
                   <p>{service.text}</p>
                 </div>
-                <span className="service-card-arrow" aria-hidden="true"><ArrowRight /></span>
               </a>
             ))}
           </div>
@@ -180,9 +182,9 @@ function HomePage() {
             <h2>Three steps to<br /><em>more free time.</em></h2>
           </div>
           <div className="process-steps">
-            <article><span>1</span><h3>Tell us about your home</h3><p>Send a few details and your ideal cleaning schedule.</p></article>
-            <article><span>2</span><h3>Receive a clear quote</h3><p>We send straightforward pricing tailored to your space.</p></article>
-            <article><span>3</span><h3>Come home happy</h3><p>We handle the checklist while you get on with your day.</p></article>
+            <article><span>1</span><h3>Share Your Cleaning Needs</h3><p>Tell us a little about your home and the kind of clean you’re looking for.</p></article>
+            <article><span>2</span><h3>Get an Instant Quote</h3><p>See your price instantly and book your cleaning with confidence.</p></article>
+            <article><span>3</span><h3>You Relax, We Clean</h3><p>We take care of the details while you enjoy coming home to a space that feels fresh, clean, and cared for.</p></article>
           </div>
         </section>
 
@@ -246,7 +248,7 @@ function HomePage() {
               {formStatus === 'sending' ? 'Sending your request...' : 'BOOK NOW'} <ArrowRight size={18} />
             </button>
             {formStatus === 'success' && <p className="form-message success">Thanks! Your request is in. We’ll be in touch soon.</p>}
-            {formStatus === 'error' && <p className="form-message error">Something went wrong. Please call or email us instead.</p>}
+            {formStatus === 'error' && <p className="form-message error">Something went wrong. Please <a href="tel:+17274333048">call us</a> or <a href="mailto:hello@solaracleaningservices.com">email us</a> instead.</p>}
           </form>
         </section>
 

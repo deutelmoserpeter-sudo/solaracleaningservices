@@ -7,6 +7,18 @@ type FaqListProps = {
   items: FaqQuestion[]
 }
 
+function renderAnswer(answer: string) {
+  return answer.split(/(contact us|call us)/gi).map((part, index) => {
+    const normalizedPart = part.toLowerCase()
+
+    if (normalizedPart === 'contact us' || normalizedPart === 'call us') {
+      return <a href="tel:+17274333048" key={`${part}-${index}`}>{part}</a>
+    }
+
+    return part
+  })
+}
+
 export function FaqList({ items }: FaqListProps) {
   const [openFaq, setOpenFaq] = useState(-1)
 
@@ -21,7 +33,7 @@ export function FaqList({ items }: FaqListProps) {
           >
             <span className="faq-question-copy"><small>{faq.category}</small><span>{faq.question}</span></span><ChevronDown />
           </button>
-          <div className="faq-answer"><p>{faq.answer}</p></div>
+          <div className="faq-answer"><p>{renderAnswer(faq.answer)}</p></div>
         </article>
       ))}
     </div>

@@ -52,6 +52,9 @@ function ServicePage() {
               {service.slug === 'office-cleaning' && (
                 <small className="photo-credit">Photo: Ingridinsydney / CC BY-SA 4.0</small>
               )}
+              {service.slug === 'post-construction-cleaning' && (
+                <small className="photo-credit">Photo: Sergej Majboroda / Poly Haven / CC0</small>
+              )}
             </div>
             <div className="service-icon-stamp">
               <ServiceIcon size={34} aria-hidden="true" />
@@ -61,7 +64,7 @@ function ServicePage() {
           </div>
         </section>
 
-        <section className={`service-detail-content section${service.quoteNotice ? ' service-quote-layout' : ''}${service.slug === 'office-cleaning' || service.slug === 'post-construction-cleaning' ? ' office-detail-content' : ''}`} id="details">
+        <section className={`service-detail-content section${service.quoteNotice ? ' service-quote-layout' : ''}${service.slug === 'office-cleaning' || service.slug === 'post-construction-cleaning' ? ' office-detail-content' : ''}${service.slug === 'post-construction-cleaning' ? ' post-construction-detail-content' : ''}`} id="details">
           <div className="service-story">
             <p className="eyebrow">Care shaped around your space</p>
             <h2>A detailed clean.<br /><em>A lighter day.</em></h2>
@@ -72,9 +75,9 @@ function ServicePage() {
             </div>
             {service.quoteNotice && (
               <aside className="service-quote-notice">
-                <strong>Contact us for an accurate quote</strong>
+                <a href="tel:+17274333048"><strong>Contact us for an accurate quote</strong></a>
                 <p>
-                  {service.quoteNotice} Please contact us via <a href="tel:+17274333048">phone</a> or{' '}
+                  {service.quoteNotice} Please <a href="tel:+17274333048">contact us by phone</a> or{' '}
                   <a href="mailto:hello@solaracleaningservices.com">email</a> for a quote!{' '}
                   <a href="tel:+17274333048">(727) 433-3048</a>
                 </p>
