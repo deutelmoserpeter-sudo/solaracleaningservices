@@ -12,7 +12,7 @@ function renderAnswer(answer: string) {
     const normalizedPart = part.toLowerCase()
 
     if (normalizedPart === 'contact us' || normalizedPart === 'call us') {
-      return <a href="tel:+17274333048" key={`${part}-${index}`}>{part}</a>
+      return <a href="tel:+17275948636" key={`${part}-${index}`}>{part}</a>
     }
 
     return part

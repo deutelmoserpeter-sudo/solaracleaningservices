@@ -75,11 +75,11 @@ function ServicePage() {
             </div>
             {service.quoteNotice && (
               <aside className="service-quote-notice">
-                <a href="tel:+17274333048"><strong>Contact us for an accurate quote</strong></a>
+                <a href="tel:+17275948636"><strong>Contact us for an accurate quote</strong></a>
                 <p>
-                  {service.quoteNotice} Please <a href="tel:+17274333048">contact us by phone</a> or{' '}
-                  <a href="mailto:hello@solaracleaningservices.com">email</a> for a quote!{' '}
-                  <a href="tel:+17274333048">(727) 433-3048</a>
+                  {service.quoteNotice} Please <a href="tel:+17275948636">contact us by phone</a> or{' '}
+                  <a href="mailto:hello@solaracleaningfl.com">email</a> for a quote!{' '}
+                  <a href="tel:+17275948636">(727) 594-8636</a>
                 </p>
               </aside>
             )}

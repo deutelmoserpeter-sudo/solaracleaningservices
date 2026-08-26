@@ -52,11 +52,11 @@ export function SiteHeader() {
         <a href="/faq" onClick={closeMenu}>FAQ</a>
         <a href="/apply" onClick={closeMenu}>Join Our Team</a>
         <a className="mobile-quote" href="/#quote" onClick={closeMenu}>BOOK NOW <ArrowRight size={17} /></a>
-        <a className="mobile-phone" href="tel:+17274333048" onClick={closeMenu}><Phone size={18} /> (727)-433-3048</a>
+        <a className="mobile-phone" href="tel:+17275948636" onClick={closeMenu}><Phone size={18} /> (727) 594-8636</a>
       </nav>
 
       <div className="header-actions">
-        <a className="header-phone" href="tel:+17274333048"><Phone size={16} /> (727)-433-3048</a>
+        <a className="header-phone" href="tel:+17275948636"><Phone size={16} /> (727) 594-8636</a>
         <a className="button button-small header-quote" href="/#quote">BOOK NOW <ArrowRight size={17} /></a>
       </div>
       <button

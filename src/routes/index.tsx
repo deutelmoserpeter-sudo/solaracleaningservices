@@ -227,8 +227,8 @@ function HomePage() {
             <p>Share a few details and we’ll follow up with a personalized, no-pressure quote.</p>
             <div className="quote-contact">
               <span>Prefer to chat?</span>
-              <a href="tel:+17274333048">(727) 433-3048</a>
-              <a href="mailto:hello@solaracleaningservices.com">hello@solaracleaningservices.com</a>
+              <a href="tel:+17275948636">(727) 594-8636</a>
+              <a href="mailto:hello@solaracleaningfl.com">hello@solaracleaningfl.com</a>
             </div>
           </div>
 
@@ -248,7 +248,7 @@ function HomePage() {
               {formStatus === 'sending' ? 'Sending your request...' : 'BOOK NOW'} <ArrowRight size={18} />
             </button>
             {formStatus === 'success' && <p className="form-message success">Thanks! Your request is in. We’ll be in touch soon.</p>}
-            {formStatus === 'error' && <p className="form-message error">Something went wrong. Please <a href="tel:+17274333048">call us</a> or <a href="mailto:hello@solaracleaningservices.com">email us</a> instead.</p>}
+            {formStatus === 'error' && <p className="form-message error">Something went wrong. Please <a href="tel:+17275948636">call us</a> or <a href="mailto:hello@solaracleaningfl.com">email us</a> instead.</p>}
           </form>
         </section>
 
