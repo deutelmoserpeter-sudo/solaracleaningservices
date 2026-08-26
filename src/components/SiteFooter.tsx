@@ -15,7 +15,7 @@ export function SiteFooter({ commercial = false }: SiteFooterProps) {
         <p>{commercial ? 'Thoughtful residential and commercial cleaning for lighter spaces and brighter days.' : 'Thoughtful residential cleaning for lighter homes and brighter days.'}</p>
       </div>
       <div className="footer-links"><h3>Explore</h3><a href="/#services">Services</a><a href="/about">Our approach</a><a href="/#reviews">Kind words</a><a href="/faq">FAQ</a></div>
-      <div className="footer-links"><h3>Say hello</h3><a href="tel:+17274333048">(727) 433-3048</a><a href="mailto:hello@solaracleaningservices.com">Email the team</a><span>Serving St. Petersburg, FL</span></div>
+      <div className="footer-links"><h3>Say hello</h3><a href="tel:+17275948636">(727) 594-8636</a><a href="mailto:hello@solaracleaningfl.com">hello@solaracleaningfl.com</a><span>Serving St. Petersburg, FL</span></div>
       <div className="cleaner-callout">
         <div><h3>Become a Cleaner</h3><p>Looking for flexible cleaning work? Partner with us to provide professional cleaning services across St. Pete.</p></div>
         <Link className="button cleaner-button" to="/apply">Apply Now <ArrowRight size={17} /></Link>
