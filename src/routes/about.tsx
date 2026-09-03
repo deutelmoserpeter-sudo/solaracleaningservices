@@ -38,7 +38,7 @@ function AboutPage() {
             <p className="eyebrow"><Sparkles size={16} /> Care you can feel</p>
             <h1 id="about-title">Clean homes.<br /><em>Kind humans.</em></h1>
             <p>Solara brings reliable, detail-minded cleaning to Tampa Bay homes so your space feels cared for and your day feels a little lighter.</p>
-            <a className="button button-dark" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+            <a className="button button-dark" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
           </div>
 
           <div className="about-page-images reveal reveal-two">
@@ -92,7 +92,7 @@ function AboutPage() {
           <SunMark />
           <p>Your brighter home starts here.</p>
           <h2>Ready for a fresh start?</h2>
-          <a className="button button-dark" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+          <a className="button button-dark" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
         </section>
       </main>
       <SiteFooter />
