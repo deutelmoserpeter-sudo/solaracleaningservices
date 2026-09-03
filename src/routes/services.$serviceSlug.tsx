@@ -42,7 +42,7 @@ function ServicePage() {
             <h1>{service.title}</h1>
             <p>{service.intro}</p>
             <div className="hero-actions">
-              <a className="button button-dark" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+              <a className="button button-dark" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
               <a className="text-link" href="#details">See what’s included <span>↓</span></a>
             </div>
           </div>
@@ -90,7 +90,7 @@ function ServicePage() {
             <ul>
               {service.includes.map((item) => <li key={item}><Check size={19} /> {item}</li>)}
             </ul>
-            <a className="button" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+            <a className="button" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
           </div>
         </section>
 
@@ -117,7 +117,7 @@ function ServicePage() {
           <SunMark />
           <p>Life’s too bright to spend it cleaning.</p>
           <h2>Let’s make home feel lighter.</h2>
-          <a className="button button-dark" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+          <a className="button button-dark" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
         </section>
       </main>
 

@@ -101,7 +101,7 @@ function HomePage() {
     <div className="site-shell" id="top">
       <div className="announcement">
         <span>Now welcoming new recurring clients</span>
-        <a href="#quote">BOOK NOW <ArrowRight size={15} /></a>
+        <a href="/book-now">BOOK NOW <ArrowRight size={15} /></a>
       </div>
 
       <SiteHeader />
@@ -125,7 +125,7 @@ function HomePage() {
               <Sparkles className="quote-card-sparkles" size={32} aria-hidden="true" />
               <h2><span>Get an</span><em>Instant Quote</em></h2>
               <p>Tell us about your home and get a custom price in seconds.</p>
-              <a className="button quote-card-button" href="#quote">BOOK NOW <ArrowRight size={20} /></a>
+              <a className="button quote-card-button" href="/book-now">BOOK NOW <ArrowRight size={20} /></a>
               <small className="quote-card-note">Quick. Easy. No commitment.</small>
             </div>
             <div className="hero-note">
@@ -245,7 +245,7 @@ function HomePage() {
               <label className="full-field">Anything else we should know?<textarea name="message" rows={4} placeholder="Pets, timing, special requests..." /></label>
             </div>
             <button className="button button-dark form-button" type="submit" disabled={formStatus === 'sending'}>
-              {formStatus === 'sending' ? 'Sending your request...' : 'BOOK NOW'} <ArrowRight size={18} />
+              {formStatus === 'sending' ? 'Sending your request...' : 'REQUEST MY QUOTE'} <ArrowRight size={18} />
             </button>
             {formStatus === 'success' && <p className="form-message success">Thanks! Your request is in. We’ll be in touch soon.</p>}
             {formStatus === 'error' && <p className="form-message error">Something went wrong. Please <a href="tel:+17275948636">call us</a> or <a href="mailto:hello@solaracleaningfl.com">email us</a> instead.</p>}
@@ -261,7 +261,7 @@ function HomePage() {
           <SunMark />
           <p>Life is too bright to spend it cleaning.</p>
           <h2>Take back your Saturday.</h2>
-          <a className="button button-dark" href="#quote">BOOK NOW <ArrowRight size={18} /></a>
+          <a className="button button-dark" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
         </section>
       </main>
 

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as BookNowRouteImport } from './routes/book-now'
 import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -18,6 +19,11 @@ import { Route as ServicesServiceSlugRouteImport } from './routes/services.$serv
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookNowRoute = BookNowRouteImport.update({
+  id: '/book-now',
+  path: '/book-now',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApplyRoute = ApplyRouteImport.update({
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/apply': typeof ApplyRoute
+  '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/apply': typeof ApplyRoute
+  '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
 }
@@ -60,21 +68,23 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/apply': typeof ApplyRoute
+  '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/apply' | '/faq' | '/services/$serviceSlug'
+  fullPaths: '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/apply' | '/faq' | '/services/$serviceSlug'
-  id: '__root__' | '/' | '/about' | '/apply' | '/faq' | '/services/$serviceSlug'
+  to: '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
+  id: '__root__' | '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ApplyRoute: typeof ApplyRoute
+  BookNowRoute: typeof BookNowRoute
   FaqRoute: typeof FaqRoute
   ServicesServiceSlugRoute: typeof ServicesServiceSlugRoute
 }
@@ -93,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/apply'
       fullPath: '/apply'
       preLoaderRoute: typeof ApplyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-now': {
+      id: '/book-now'
+      path: '/book-now'
+      fullPath: '/book-now'
+      preLoaderRoute: typeof BookNowRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -123,6 +140,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ApplyRoute: ApplyRoute,
+  BookNowRoute: BookNowRoute,
   FaqRoute: FaqRoute,
   ServicesServiceSlugRoute: ServicesServiceSlugRoute,
 }

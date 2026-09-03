@@ -38,7 +38,7 @@ export const faqQuestions: FaqQuestion[] = [
   {
     category: 'Pricing & scheduling',
     question: 'What is your cancellation policy?',
-    answer: 'Please give us as much notice as possible if plans change. Your booking confirmation includes the current rescheduling and cancellation terms for your appointment.',
+    answer: 'Cancellations made before 12:00 PM the day before your scheduled cleaning are free. Cancellations after this time are subject to a 50% cancellation fee to compensate for the time reserved for your appointment.',
   },
   {
     category: 'During your clean',

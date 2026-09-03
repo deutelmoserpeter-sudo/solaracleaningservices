@@ -38,7 +38,7 @@ function FaqPage() {
               <Sparkles className="quote-card-sparkles" size={30} aria-hidden="true" />
               <h2><span>Get an</span><em>Instant Quote</em></h2>
               <p>Tell us about your home and get a custom price in seconds.</p>
-              <a className="button quote-card-button" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+              <a className="button quote-card-button" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
               <small className="quote-card-note">Quick. Easy. No commitment.</small>
             </div>
           </div>
@@ -49,7 +49,7 @@ function FaqPage() {
           <SunMark />
           <p>Ready when you are.</p>
           <h2>Let’s make your space feel lighter.</h2>
-          <a className="button button-dark" href="/#quote">BOOK NOW <ArrowRight size={18} /></a>
+          <a className="button button-dark" href="/book-now">BOOK NOW <ArrowRight size={18} /></a>
         </section>
       </main>
       <SiteFooter commercial />
