@@ -233,6 +233,7 @@ img { display: block; max-width: 100%; }
 .form-grid input:focus, .form-grid select:focus, .form-grid textarea:focus { outline: 0; background: #fff; box-shadow: 4px 4px 0 var(--sea); }
 .full-field { grid-column: 1 / -1; }
 .form-button { width: 100%; margin-top: 25px; }
+.form-helper { margin: 14px 0 0; color: var(--palm-dark); font-size: 12px; font-weight: 700; text-align: center; }
 .hidden-field { position: absolute; left: -9999px; }
 .form-message { margin: 18px 0 0; padding: 13px; border: 2px solid var(--ink); font-size: 13px; font-weight: 700; }
 .form-message a, .faq-answer a { font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
