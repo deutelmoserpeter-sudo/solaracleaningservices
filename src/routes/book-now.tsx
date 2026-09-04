@@ -6,10 +6,23 @@ import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
 
 export const Route = createFileRoute('/book-now')({
+  validateSearch: (search) => ({
+    service_id: getSearchValue(search.service_id),
+    frequency_id: getSearchValue(search.frequency_id),
+    zipcode: getSearchValue(search.zipcode),
+    'pricing_parameter[1]': getSearchValue(search['pricing_parameter[1]']),
+    'pricing_parameter[2]': getSearchValue(search['pricing_parameter[2]']),
+  }),
   component: BookNowPage,
 })
 
+function getSearchValue(value: unknown) {
+  return typeof value === 'string' || typeof value === 'number' ? String(value) : undefined
+}
+
 function BookNowPage() {
+  const search = Route.useSearch()
+
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://solaracleaningfl.bookingkoala.com/resources/embed.js'
@@ -21,6 +34,19 @@ function BookNowPage() {
       script.remove()
     }
   }, [])
+
+  const bookingParams = new URLSearchParams({
+    embed: 'true',
+    industry_id: '1',
+    form_id: '1',
+    location: '1',
+  })
+
+  Object.entries(search).forEach(([key, value]) => {
+    if (value) bookingParams.set(key, value)
+  })
+
+  const bookingUrl = `https://solaracleaningfl.bookingkoala.com/booknow?${bookingParams.toString()}`
 
   return (
     <div className="site-shell booking-page-shell" id="top">
@@ -43,7 +69,7 @@ function BookNowPage() {
         </header>
         <div className="booking-embed" aria-label="Solara Cleaning Services online booking form">
           <iframe
-            src="https://solaracleaningfl.bookingkoala.com/booknow?embed=true"
+            src={bookingUrl}
             title="Book a cleaning with Solara Cleaning Services"
             width="100%"
             height="1000"

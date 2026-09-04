@@ -64,7 +64,6 @@ const reviews = [
 
 function HomePage() {
   const [activeReview, setActiveReview] = useState(0)
-  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   useEffect(() => {
     const reviewTimer = window.setInterval(() => {
@@ -73,29 +72,6 @@ function HomePage() {
 
     return () => window.clearInterval(reviewTimer)
   }, [])
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setFormStatus('sending')
-    const form = event.currentTarget
-    const formData = new FormData(form)
-    const body = new URLSearchParams()
-    formData.forEach((value, key) => body.append(key, String(value)))
-
-    try {
-      const response = await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString(),
-      })
-
-      if (!response.ok) throw new Error('Unable to submit form')
-      form.reset()
-      setFormStatus('success')
-    } catch {
-      setFormStatus('error')
-    }
-  }
 
   return (
     <div className="site-shell" id="top">
@@ -224,7 +200,7 @@ function HomePage() {
           <div className="quote-intro">
             <p className="eyebrow light">Your fresh start</p>
             <h2>Tell us about<br /><em>your home.</em></h2>
-            <p>Share a few details and we’ll follow up with a personalized, no-pressure quote.</p>
+            <p>Share a few details, then continue to our booking form with your selections already filled in.</p>
             <div className="quote-contact">
               <span>Prefer to chat?</span>
               <a href="tel:+17275948636">(727) 594-8636</a>
@@ -232,23 +208,18 @@ function HomePage() {
             </div>
           </div>
 
-          <form className="quote-form" name="cleaning-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="cleaning-quote" />
-            <p className="hidden-field"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <form className="quote-form" action="/book-now" method="GET">
             <div className="form-grid">
-              <label>First name<input type="text" name="first-name" autoComplete="given-name" required placeholder="Your first name" /></label>
-              <label>Last name<input type="text" name="last-name" autoComplete="family-name" required placeholder="Your last name" /></label>
-              <label>Email<input type="email" name="email" autoComplete="email" required placeholder="you@example.com" /></label>
-              <label>Phone<input type="tel" name="phone" autoComplete="tel" required placeholder="(555) 123-4567" /></label>
-              <label>Service needed<select name="service" required defaultValue=""><option value="" disabled>Select a service</option><option>Recurring clean</option><option>Deep clean</option><option>Move in / out</option><option>Not sure yet</option></select></label>
-              <label>Home size<select name="home-size" required defaultValue=""><option value="" disabled>Select home size</option><option>Studio / 1 bedroom</option><option>2 bedrooms</option><option>3 bedrooms</option><option>4+ bedrooms</option></select></label>
-              <label className="full-field">Anything else we should know?<textarea name="message" rows={4} placeholder="Pets, timing, special requests..." /></label>
+              <label>Cleaning service<select name="service_id" required defaultValue=""><option value="" disabled>Select a service</option><option value="6">Standard Cleaning</option><option value="2">Deep Cleaning</option><option value="3">Move In/Out Cleaning</option><option value="7">Airbnb Cleaning</option><option value="5">Post Construction Cleaning</option><option value="4">Office Cleaning</option></select></label>
+              <label>Cleaning frequency<select name="frequency_id" required defaultValue=""><option value="" disabled>Select a frequency</option><option value="1">One-Time</option><option value="3">Weekly (15% Off)</option><option value="4">Bi-Weekly (10% Off)</option><option value="2">Monthly (5% Off)</option></select></label>
+              <label>Number of bedrooms<select name="pricing_parameter[1]" required defaultValue=""><option value="" disabled>Select bedrooms</option><option value="32">0 / Studio</option><option value="3">1</option><option value="2">2</option><option value="5">3</option><option value="4">4</option><option value="6">5</option><option value="35">6</option></select></label>
+              <label>Number of bathrooms<select name="pricing_parameter[2]" required defaultValue=""><option value="" disabled>Select bathrooms</option><option value="33">0</option><option value="34">1</option><option value="8">1.5</option><option value="9">2</option><option value="10">2.5</option><option value="11">3</option><option value="12">3.5</option><option value="13">4</option><option value="14">4.5</option><option value="15">5</option><option value="16">5.5</option><option value="17">6</option><option value="18">6.5</option><option value="19">7</option></select></label>
+              <label className="full-field">ZIP code<input type="text" name="zipcode" inputMode="numeric" autoComplete="postal-code" pattern="[0-9]{5}" maxLength={5} required placeholder="33701" /></label>
             </div>
-            <button className="button button-dark form-button" type="submit" disabled={formStatus === 'sending'}>
-              {formStatus === 'sending' ? 'Sending your request...' : 'REQUEST MY QUOTE'} <ArrowRight size={18} />
+            <button className="button button-dark form-button" type="submit">
+              REQUEST A QUOTE <ArrowRight size={18} />
             </button>
-            {formStatus === 'success' && <p className="form-message success">Thanks! Your request is in. We’ll be in touch soon.</p>}
-            {formStatus === 'error' && <p className="form-message error">Something went wrong. Please <a href="tel:+17275948636">call us</a> or <a href="mailto:hello@solaracleaningfl.com">email us</a> instead.</p>}
+            <p className="form-helper">You’ll review pricing and availability before booking.</p>
           </form>
         </section>
 
