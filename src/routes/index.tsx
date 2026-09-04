@@ -209,15 +209,15 @@ function HomePage() {
           </div>
 
           <form className="quote-form" action="/book-now" method="GET">
-            <div className="form-grid">
-              <label>Cleaning service<select name="service_id" required defaultValue=""><option value="" disabled>Select a service</option><option value="6">Standard Cleaning</option><option value="2">Deep Cleaning</option><option value="3">Move In/Out Cleaning</option><option value="7">Airbnb Cleaning</option><option value="5">Post Construction Cleaning</option><option value="4">Office Cleaning</option></select></label>
-              <label>Cleaning frequency<select name="frequency_id" required defaultValue=""><option value="" disabled>Select a frequency</option><option value="1">One-Time</option><option value="3">Weekly (15% Off)</option><option value="4">Bi-Weekly (10% Off)</option><option value="2">Monthly (5% Off)</option></select></label>
+            <div className="form-grid quote-form-grid">
+              <label className="full-field">Cleaning service<select name="service_id" required defaultValue=""><option value="" disabled>Select a service</option><option value="6">Standard Cleaning</option><option value="2">Deep Cleaning</option><option value="3">Move In/Out Cleaning</option><option value="7">Airbnb Cleaning</option><option value="5">Post Construction Cleaning</option><option value="4">Office Cleaning</option></select></label>
+              <label className="full-field">Cleaning frequency<select name="frequency_id" required defaultValue=""><option value="" disabled>Select a frequency</option><option value="1">One-Time</option><option value="3">Weekly (15% Off)</option><option value="4">Bi-Weekly (10% Off)</option><option value="2">Monthly (5% Off)</option></select></label>
               <label>Number of bedrooms<select name="pricing_parameter[1]" required defaultValue=""><option value="" disabled>Select bedrooms</option><option value="32">0 / Studio</option><option value="3">1</option><option value="2">2</option><option value="5">3</option><option value="4">4</option><option value="6">5</option><option value="35">6</option></select></label>
               <label>Number of bathrooms<select name="pricing_parameter[2]" required defaultValue=""><option value="" disabled>Select bathrooms</option><option value="33">0</option><option value="34">1</option><option value="8">1.5</option><option value="9">2</option><option value="10">2.5</option><option value="11">3</option><option value="12">3.5</option><option value="13">4</option><option value="14">4.5</option><option value="15">5</option><option value="16">5.5</option><option value="17">6</option><option value="18">6.5</option><option value="19">7</option></select></label>
               <label className="full-field">ZIP code<input type="text" name="zipcode" inputMode="numeric" autoComplete="postal-code" pattern="[0-9]{5}" maxLength={5} required placeholder="33701" /></label>
             </div>
             <button className="button button-dark form-button" type="submit">
-              REQUEST A QUOTE <ArrowRight size={18} />
+              GET AN INSTANT QUOTE <ArrowRight size={18} />
             </button>
             <p className="form-helper">You’ll review pricing and availability before booking.</p>
           </form>

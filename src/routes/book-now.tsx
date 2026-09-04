@@ -42,7 +42,15 @@ function BookNowPage() {
     location: '1',
   })
 
-  Object.entries(search).forEach(([key, value]) => {
+  const supportedPrefillParams = {
+    service_id: search.service_id,
+    frequency_id: search.frequency_id,
+    zipcode: search.zipcode,
+    'pricing_parameter[1]': search['pricing_parameter[1]'],
+    'pricing_parameter[2]': search['pricing_parameter[2]'],
+  }
+
+  Object.entries(supportedPrefillParams).forEach(([key, value]) => {
     if (value) bookingParams.set(key, value)
   })
 

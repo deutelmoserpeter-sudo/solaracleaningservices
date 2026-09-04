@@ -74,10 +74,19 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
+  fullPaths:
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
-  id: '__root__' | '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
+  to:
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/apply'
+    | '/book-now'
+    | '/faq'
+    | '/services/$serviceSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -98,18 +107,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/apply': {
-      id: '/apply'
-      path: '/apply'
-      fullPath: '/apply'
-      preLoaderRoute: typeof ApplyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/book-now': {
       id: '/book-now'
       path: '/book-now'
       fullPath: '/book-now'
       preLoaderRoute: typeof BookNowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apply': {
+      id: '/apply'
+      path: '/apply'
+      fullPath: '/apply'
+      preLoaderRoute: typeof ApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
