@@ -10,6 +10,8 @@ export const Route = createRootRoute({
       { title: 'Solara Cleaning Services | A Cleaner Home, A Brighter Day' },
       { name: 'description', content: "St. Pete's go-to cleaner for recurring, deep, move-in, and move-out cleaning services." },
       { name: 'theme-color', content: '#0f4c34' },
+      { property: 'og:site_name', content: 'Solara Cleaning Services' },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     links: [
       { rel: 'icon', href: '/favicon.ico', sizes: 'any' },

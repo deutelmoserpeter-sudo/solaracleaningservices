@@ -7,6 +7,18 @@ import { SunMark } from '../components/SunMark'
 
 export const Route = createFileRoute('/about')({
   component: AboutPage,
+  head: () => ({
+    meta: [
+      { title: 'About Solara Cleaning Services | St. Petersburg, FL' },
+      { name: 'description', content: 'Meet Solara Cleaning Services, a local team providing thoughtful residential cleaning for homes across St. Petersburg, Florida.' },
+      { property: 'og:title', content: 'About Solara Cleaning Services | St. Petersburg, FL' },
+      { property: 'og:description', content: 'Meet the local Solara team providing thoughtful residential cleaning across St. Petersburg, Florida.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://solaracleaningfl.com/about' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/team-cleaning.jpg' },
+    ],
+    links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/about' }],
+  }),
 })
 
 const values = [
@@ -28,8 +40,18 @@ const values = [
 ]
 
 function AboutPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://solaracleaningfl.com/' },
+      { '@type': 'ListItem', position: 2, name: 'About', item: 'https://solaracleaningfl.com/about' },
+    ],
+  }
+
   return (
     <div className="site-shell about-page-shell" id="top">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
       <SiteHeader />
       <main>
         <section className="about-page-hero" aria-labelledby="about-title">
@@ -43,10 +65,10 @@ function AboutPage() {
 
           <div className="about-page-images reveal reveal-two">
             <div className="about-main-image">
-              <img src="/images/team-cleaning.jpg" alt="Friendly home cleaning professional at work" />
+              <img src="/images/team-cleaning.jpg" alt="Friendly home cleaning professional at work" width={1400} height={1050} loading="eager" fetchPriority="high" />
             </div>
             <div className="about-accent-image">
-              <img src="/images/cleaning-sun.jpg" alt="Bright, freshly cleaned home in the sunshine" />
+              <img src="/images/cleaning-sun.jpg" alt="Bright, freshly cleaned home in the sunshine" width={540} height={360} loading="lazy" />
             </div>
             <span className="handwritten">the little things<br />matter here</span>
           </div>

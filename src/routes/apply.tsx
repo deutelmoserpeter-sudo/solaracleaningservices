@@ -7,6 +7,18 @@ import { SiteHeader } from '../components/SiteHeader'
 
 export const Route = createFileRoute('/apply')({
   component: CleanerApplicationPage,
+  head: () => ({
+    meta: [
+      { title: 'Cleaning Jobs in St. Petersburg, FL | Solara Cleaning' },
+      { name: 'description', content: 'Apply to provide professional cleaning services with Solara Cleaning Services in St. Petersburg and nearby communities.' },
+      { property: 'og:title', content: 'Cleaning Jobs in St. Petersburg, FL | Solara Cleaning' },
+      { property: 'og:description', content: 'Explore cleaning work with Solara Cleaning Services in the St. Petersburg area.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://solaracleaningfl.com/apply' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/cleaner-application.webp' },
+    ],
+    links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/apply' }],
+  }),
 })
 
 const roleHighlights = [
@@ -54,7 +66,7 @@ function CleanerApplicationPage() {
             <a className="button button-dark" href="#application">START YOUR APPLICATION <ArrowRight size={18} /></a>
           </div>
           <div className="apply-hero-visual reveal reveal-two">
-            <img src="/images/cleaner-application.png" alt="Professional cleaner wiping a bathroom counter" />
+            <img src="/images/cleaner-application.webp" alt="Professional cleaner wiping a bathroom counter" width={1536} height={1024} loading="eager" fetchPriority="high" />
             <div className="apply-note">
               <MapPin size={18} aria-hidden="true" />
               <span>Serving St. Petersburg<br />and nearby communities</span>

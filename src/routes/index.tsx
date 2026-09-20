@@ -37,6 +37,18 @@ function TrustFeatures({ mobile = false }: { mobile?: boolean }) {
 
 export const Route = createFileRoute('/')({
   component: HomePage,
+  head: () => ({
+    meta: [
+      { title: 'House Cleaning Services St. Petersburg, FL | Solara Cleaning' },
+      { name: 'description', content: 'Professional house cleaning in St. Petersburg, FL for a fresher home and more free time. Get an instant quote from Solara Cleaning Services.' },
+      { property: 'og:title', content: 'House Cleaning Services in St. Petersburg, FL | Solara' },
+      { property: 'og:description', content: 'Professional residential cleaning in St. Petersburg and nearby Pinellas County communities. Get an instant quote online.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://solaracleaningfl.com/' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/hero-cleaning.jpg' },
+    ],
+    links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/' }],
+  }),
 })
 
 const reviews = [
@@ -75,6 +87,18 @@ function HomePage() {
 
   return (
     <div className="site-shell" id="top">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': 'https://solaracleaningfl.com/#business',
+        name: 'Solara Cleaning Services',
+        url: 'https://solaracleaningfl.com/',
+        telephone: '+1-727-594-8636',
+        email: 'hello@solaracleaningfl.com',
+        description: 'Professional residential and small-office cleaning serving St. Petersburg and surrounding areas in Pinellas County, Florida.',
+        areaServed: { '@type': 'AdministrativeArea', name: 'Pinellas County, Florida' },
+        hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Cleaning services', itemListElement: services.map((service) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: service.title, url: `https://solaracleaningfl.com/services/${service.slug}` } })) },
+      }).replace(/</g, '\\u003c') }} />
       <div className="announcement">
         <span>Now welcoming new recurring clients</span>
         <a href="/book-now">BOOK NOW <ArrowRight size={15} /></a>
@@ -86,10 +110,10 @@ function HomePage() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy reveal reveal-one">
             <span className="mobile-home-rays" aria-hidden="true" />
-            <p className="eyebrow"><Sparkles size={16} /> St. Pete&apos;s Go-To Cleaner</p>
-            <h1 id="hero-title">A cleaner home.<br /><em>A brighter day.</em></h1>
+            <p className="eyebrow"><Sparkles size={16} /> A cleaner home. A brighter day.</p>
+            <h1 id="hero-title">House Cleaning Services<br /><em>in St. Petersburg, FL</em></h1>
             <p className="hero-intro">
-              Soak up the sunshine. Leave the scrubbing to us. Our trusted cleaners keep your home fresh and welcoming, giving you more time to enjoy what matters.
+              Solara Cleaning Services provides professional residential cleaning throughout St. Petersburg and surrounding Pinellas County communities. Choose <a href="/services/standard-cleaning">standard cleaning</a>, <a href="/services/deep-cleaning">deep cleaning</a>, <a href="/services/recurring-cleaning">recurring cleaning</a>, or <a href="/services/move-in-out-cleaning">move-in and move-out cleaning</a> for a home that feels fresh and welcoming.
             </p>
             <TrustFeatures />
           </div>
