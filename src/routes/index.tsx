@@ -110,10 +110,9 @@ function HomePage() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy reveal reveal-one">
             <span className="mobile-home-rays" aria-hidden="true" />
-            <p className="eyebrow"><Sparkles size={16} /> A cleaner home. A brighter day.</p>
-            <h1 id="hero-title">House Cleaning Services<br /><em>in St. Petersburg, FL</em></h1>
+            <h1 id="hero-title">A cleaner home.<br /><em>A brighter day.</em></h1>
             <p className="hero-intro">
-              Solara Cleaning Services provides professional residential cleaning throughout St. Petersburg and surrounding Pinellas County communities. Choose <a href="/services/standard-cleaning">standard cleaning</a>, <a href="/services/deep-cleaning">deep cleaning</a>, <a href="/services/recurring-cleaning">recurring cleaning</a>, or <a href="/services/move-in-out-cleaning">move-in and move-out cleaning</a> for a home that feels fresh and welcoming.
+              Soak up the sunshine. Leave the scrubbing to us. Our trusted cleaners keep your home fresh and welcoming, giving you more time to enjoy what matters.
             </p>
             <TrustFeatures />
           </div>
