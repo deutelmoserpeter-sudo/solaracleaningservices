@@ -51,35 +51,43 @@ export const Route = createFileRoute('/')({
   }),
 })
 
-const reviews = [
+const googleReviews = [
   {
-    quote: 'Walking in after Solara has been here is the best feeling. They are warm, reliable, and somehow make every room feel brand new.',
-    name: 'Marissa P.',
-    detail: 'Recurring client',
+    authorName: 'Chris Galli',
+    rating: 5,
+    text: 'Really happy with the cleaning. The showers came out so good, especially the glass and all the buildup around the corners. Honestly the whole place looked and felt so much cleaner when they were done. They did a great job and I’m definitely using Solara again.',
   },
   {
-    quote: 'The attention to detail is incredible. Even the little places I usually forget looked fresh, polished, and completely reset.',
-    name: 'Lauren T.',
-    detail: 'Deep clean client',
+    authorName: 'Elijah Burroughs',
+    rating: 5,
+    title: 'Great price',
+    text: 'By far the best clean for price. My hardwood floors look better than how they looked when I bought the house! I’ve been through dozens of cleaners and none compared. They did exactly what they said they were going to do, and didn’t try to sell me anything I didn’t need. Simple, fast, honest, and fair. Beautiful finish!',
   },
   {
-    quote: 'Our move felt so much easier knowing the final clean was handled. The house looked spotless and ready for the next family.',
-    name: 'Daniel R.',
-    detail: 'Move-out client',
+    authorName: 'Tre Rahilly',
+    rating: 5,
+    text: 'My wife has these guys come by the house every 1-2 weeks and man they are great. I don’t have to spend everyday after work picking up after the kids anymore. These guys do it for me!! I will say I was hesitant at first but their price was so good it became a no brainer.',
   },
   {
-    quote: 'The team communicates clearly, arrives when expected, and leaves our office feeling professional and welcoming every time.',
-    name: 'Camila S.',
-    detail: 'Office client',
+    authorName: 'Connor Stone',
+    rating: 5,
+    text: 'THE ATTENTION TO DETAIL IS INCREDIBLE. EVEN THE LITTLE PLACES I USUALLY FORGET LOOKED FRESH, POLISHED, AND COMPLETELY RESET.',
   },
-]
+] satisfies Array<{
+  authorName: string
+  rating: number
+  text: string
+  title?: string
+}>
+
+const googleReviewsUrl = 'https://share.google/jxgiHxf2ucUH0PbER'
 
 function HomePage() {
   const [activeReview, setActiveReview] = useState(0)
 
   useEffect(() => {
     const reviewTimer = window.setInterval(() => {
-      setActiveReview((currentReview) => (currentReview + 1) % reviews.length)
+      setActiveReview((currentReview) => (currentReview + 1) % googleReviews.length)
     }, 5000)
 
     return () => window.clearInterval(reviewTimer)
@@ -191,31 +199,34 @@ function HomePage() {
           <div className="review-quote">
             <div className="big-quote">“</div>
             <div className="review-slide" key={activeReview}>
-              <div className="stars coral" aria-hidden="true">
+              <div className="stars coral" aria-label={`${googleReviews[activeReview].rating} out of 5 stars`}>
                 {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={17} fill="currentColor" />)}
               </div>
-              <blockquote>“{reviews[activeReview].quote}”</blockquote>
-              <p className="reviewer">— {reviews[activeReview].name} <span>{reviews[activeReview].detail}</span></p>
+              {googleReviews[activeReview].title && <p className="review-title">{googleReviews[activeReview].title}</p>}
+              <blockquote>“{googleReviews[activeReview].text}”</blockquote>
+              <p className="reviewer">— {googleReviews[activeReview].authorName} <span>Google review</span></p>
             </div>
             <div className="review-controls" aria-label="Choose a customer review">
-              {reviews.map((review, index) => (
+              {googleReviews.map((review, index) => (
                 <button
                   className={activeReview === index ? 'is-active' : ''}
                   type="button"
-                  aria-label={`Show review from ${review.name}`}
+                  aria-label={`Show review from ${review.authorName}`}
                   aria-pressed={activeReview === index}
-                  key={review.name}
+                  key={review.authorName}
                   onClick={() => setActiveReview(index)}
                 />
               ))}
             </div>
-            <span className="review-counter">{String(activeReview + 1).padStart(2, '0')} / {String(reviews.length).padStart(2, '0')}</span>
+            <span className="review-counter">{String(activeReview + 1).padStart(2, '0')} / {String(googleReviews.length).padStart(2, '0')}</span>
           </div>
           <div className="review-side">
-            <p className="eyebrow">Kind words</p>
+            <p className="eyebrow">Google reviews</p>
             <h2>Loved by busy<br /><em>local households.</em></h2>
-            <div className="review-stat"><strong>4.9</strong><span>average client rating</span></div>
+            <div className="review-stat"><strong className="google-rating">5.0 ★ (6 Google reviews)</strong></div>
             <div className="review-stat"><strong>100%</strong><span>Insured &amp; Vetted</span></div>
+            <a className="button button-dark google-reviews-link" href={googleReviewsUrl} target="_blank" rel="noreferrer">READ ALL REVIEWS ON GOOGLE <ArrowRight size={17} /></a>
+            <small className="google-attribution">Reviews provided by Google Maps</small>
           </div>
         </section>
 
