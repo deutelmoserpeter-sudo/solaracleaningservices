@@ -386,6 +386,17 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .faq-quote-card > p { font-size: 15px; }
 
 .other-services { color: var(--white); background: var(--palm-dark); }
+.service-faq { display: grid; grid-template-columns: minmax(300px, .75fr) minmax(480px, 1.25fr); gap: clamp(55px, 8vw, 120px); align-items: start; background: var(--beige); }
+.service-faq-heading { position: sticky; top: 40px; }
+.service-faq-heading > p:last-child { max-width: 520px; line-height: 1.7; }
+.service-faq-heading a { color: inherit; font-weight: 700; }
+.service-area-link { margin-top: 42px; color: var(--white); }
+.service-areas-hero h1 { max-width: 1100px; font-size: clamp(58px, 7vw, 110px); line-height: .9; }
+.service-area-content { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(55px, 8vw, 120px); background: var(--white); }
+.service-area-content h2 { font-size: clamp(54px, 5.5vw, 84px); }
+.service-area-content > div > p:last-child { max-width: 620px; font-size: 17px; line-height: 1.75; }
+.area-list { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; list-style: none; }
+.area-list li { padding: 20px; display: flex; gap: 12px; align-items: center; border: 2px solid var(--ink); background: var(--beige); font-weight: 700; }
 .other-services-heading { margin-bottom: 55px; display: grid; grid-template-columns: .7fr 1.3fr; align-items: end; gap: 45px; }
 .other-services .eyebrow { color: var(--sun); }
 .other-services h2 em { color: var(--sea); }
@@ -490,6 +501,8 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .service-detail-visual { justify-self: center; width: min(82vw, 550px); }
   .service-detail-photo img { aspect-ratio: 4 / 3; }
   .service-detail-content { grid-template-columns: 1fr; }
+  .service-faq, .service-area-content { grid-template-columns: 1fr; }
+  .service-faq-heading { position: static; }
   .service-quote-layout .service-quote-notice { margin-top: 30px; }
   .office-detail-content::before { inset: 22px 12px; }
   .faq-page-hero { min-height: auto; padding: 150px 24px 90px; grid-template-columns: 1fr; gap: 65px; }
@@ -548,6 +561,8 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .section h2 { font-size: 49px; }
   .service-card { min-height: 330px; }
   .service-detail-copy h1 { font-size: 58px; }
+  .service-areas-hero h1 { font-size: 52px; }
+  .area-list { grid-template-columns: 1fr; }
   .service-detail-copy > p:not(.eyebrow) { font-size: 17px; }
   .service-detail-rays { top: -175px; right: -150px; width: 500px; }
   .service-icon-stamp { left: -25px; width: 125px; }

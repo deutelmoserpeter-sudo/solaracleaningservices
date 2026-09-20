@@ -9,11 +9,33 @@ import { faqQuestions } from '../data/faqs'
 
 export const Route = createFileRoute('/faq')({
   component: FaqPage,
+  head: () => ({
+    meta: [
+      { title: 'House Cleaning FAQs | Solara Cleaning St. Petersburg' },
+      { name: 'description', content: 'Find answers about Solara cleaning services, supplies, scheduling, preparation, pets, one-time cleans, recurring care, and getting a quote.' },
+      { property: 'og:title', content: 'House Cleaning FAQs | Solara Cleaning St. Petersburg' },
+      { property: 'og:description', content: 'Answers about Solara cleaning services, supplies, scheduling, preparation, recurring care, and quotes.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://solaracleaningfl.com/faq' },
+    ],
+    links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/faq' }],
+  }),
 })
 
 function FaqPage() {
+  const structuredData = [
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://solaracleaningfl.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Cleaning FAQs', item: 'https://solaracleaningfl.com/faq' },
+    ] },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqQuestions.map((faq) => ({
+      '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })) },
+  ]
+
   return (
     <div className="site-shell faq-page-shell" id="top">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
       <SiteHeader />
       <main>
         <section className="faq-page-hero">

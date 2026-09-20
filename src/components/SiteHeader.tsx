@@ -15,7 +15,7 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="/#top" aria-label="Solara Cleaning Services home" onClick={closeMenu}>
+      <a className="brand" href="/" aria-label="Solara Cleaning Services home" onClick={closeMenu}>
         <SunMark />
         <span className="brand-copy">
           <strong>Solara</strong>
@@ -24,7 +24,7 @@ export function SiteHeader() {
       </a>
 
       <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
-        <a href="/#top" onClick={closeMenu}>Home</a>
+        <a href="/" onClick={closeMenu}>Home</a>
         <div className={servicesOpen ? 'nav-services is-open' : 'nav-services'}>
           <button
             className="services-trigger"
@@ -48,6 +48,7 @@ export function SiteHeader() {
           </div>
         </div>
         <a href="/about" onClick={closeMenu}>About</a>
+        <a href="/service-areas" onClick={closeMenu}>Service Areas</a>
         <a href="/#reviews" onClick={closeMenu}>Reviews</a>
         <a href="/faq" onClick={closeMenu}>FAQ</a>
         <a href="/apply" onClick={closeMenu}>Join Our Team</a>

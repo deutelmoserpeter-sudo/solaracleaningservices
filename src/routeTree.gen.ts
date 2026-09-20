@@ -15,6 +15,7 @@ import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesServiceSlugRouteImport } from './routes/services.$serviceSlug'
+import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
@@ -46,6 +47,11 @@ const ServicesServiceSlugRoute = ServicesServiceSlugRouteImport.update({
   path: '/services/$serviceSlug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServiceAreasRoute = ServiceAreasRouteImport.update({
+  id: '/service-areas',
+  path: '/service-areas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
+  '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
+  '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,14 +79,15 @@ export interface FileRoutesById {
   '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
+  '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/service-areas' | '/services/$serviceSlug'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/services/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/service-areas' | '/services/$serviceSlug'
   id:
     | '__root__'
     | '/'
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/book-now'
     | '/faq'
     | '/services/$serviceSlug'
+    | '/service-areas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -96,6 +106,7 @@ export interface RootRouteChildren {
   BookNowRoute: typeof BookNowRoute
   FaqRoute: typeof FaqRoute
   ServicesServiceSlugRoute: typeof ServicesServiceSlugRoute
+  ServiceAreasRoute: typeof ServiceAreasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -142,6 +153,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesServiceSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/service-areas': {
+      id: '/service-areas'
+      path: '/service-areas'
+      fullPath: '/service-areas'
+      preLoaderRoute: typeof ServiceAreasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -152,6 +170,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookNowRoute: BookNowRoute,
   FaqRoute: FaqRoute,
   ServicesServiceSlugRoute: ServicesServiceSlugRoute,
+  ServiceAreasRoute: ServiceAreasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

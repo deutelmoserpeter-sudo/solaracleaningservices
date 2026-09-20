@@ -6,6 +6,17 @@ import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
 
 export const Route = createFileRoute('/book-now')({
+  head: () => ({
+    meta: [
+      { title: 'Get an Instant Cleaning Quote | Solara Cleaning' },
+      { name: 'description', content: 'Get an instant quote and book professional home cleaning with Solara Cleaning Services in the St. Petersburg area.' },
+      { property: 'og:title', content: 'Get an Instant Cleaning Quote | Solara Cleaning' },
+      { property: 'og:description', content: 'View pricing and availability for professional home cleaning in the St. Petersburg area.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://solaracleaningfl.com/book-now' },
+    ],
+    links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/book-now' }],
+  }),
   validateSearch: (search) => ({
     service_id: getSearchValue(search.service_id),
     frequency_id: getSearchValue(search.frequency_id),
