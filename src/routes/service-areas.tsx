@@ -10,10 +10,10 @@ export const Route = createFileRoute('/service-areas')({
   component: ServiceAreasPage,
   head: () => ({
     meta: [
-      { title: 'House Cleaning St. Petersburg & Pinellas County | Solara' },
-      { name: 'description', content: 'Explore Solara’s house cleaning service area in St. Petersburg and surrounding Pinellas County communities, then get an instant quote online.' },
-      { property: 'og:title', content: 'House Cleaning Services in St. Petersburg & Pinellas County' },
-      { property: 'og:description', content: 'Professional home cleaning across St. Petersburg and surrounding Pinellas County communities.' },
+      { title: 'House Cleaning in St. Petersburg & Nearby Beaches | Solara' },
+      { name: 'description', content: 'Solara provides house cleaning in St. Petersburg, Gulfport, St. Pete Beach, Treasure Island, Madeira Beach, Pinellas Park, Seminole, and Largo.' },
+      { property: 'og:title', content: 'House Cleaning in St. Petersburg & Nearby Communities' },
+      { property: 'og:description', content: 'Professional home cleaning from St. Petersburg and Gulfport to the beaches, Pinellas Park, Seminole, and Largo.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/service-areas' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/hero-cleaning.jpg' },
@@ -22,12 +22,12 @@ export const Route = createFileRoute('/service-areas')({
   }),
 })
 
-const neighborhoods = ['Downtown St. Petersburg', 'Historic Old Northeast', 'Historic Kenwood', 'Crescent Lake', 'Shore Acres', 'Snell Isle', 'Disston Heights', 'Jungle Prada']
+const serviceAreas = ['St. Petersburg', 'Gulfport', 'St. Pete Beach', 'Treasure Island', 'Madeira Beach', 'Pinellas Park', 'Seminole', 'Largo']
 
 function ServiceAreasPage() {
   const pageUrl = 'https://solaracleaningfl.com/service-areas'
   const schema = [
-    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'House Cleaning Services in St. Petersburg & Pinellas County', url: pageUrl, description: 'Service area information for Solara Cleaning Services.' },
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'House Cleaning in St. Petersburg & Nearby Communities', url: pageUrl, description: 'Explore the St. Petersburg-area communities served by Solara Cleaning Services.' },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://solaracleaningfl.com/' },
       { '@type': 'ListItem', position: 2, name: 'Service Areas', item: pageUrl },
@@ -43,19 +43,19 @@ function ServiceAreasPage() {
           <div className="faq-page-rays" aria-hidden="true" />
           <div>
             <p className="eyebrow"><MapPin size={16} /> Local cleaning, close to home</p>
-            <h1>House Cleaning Services in St. Petersburg &amp; Pinellas County</h1>
-            <p>Solara Cleaning Services provides professional residential cleaning throughout St. Petersburg and serves surrounding areas in Pinellas County. Enter your ZIP code when requesting a quote to confirm availability for your home.</p>
+            <h1>House Cleaning in St. Petersburg &amp; Nearby Communities</h1>
+            <p>Solara Cleaning Services provides professional residential cleaning across St. Petersburg, nearby beach communities, and select cities throughout southern Pinellas County. Enter your ZIP code when requesting a quote to confirm availability for your home.</p>
           </div>
         </section>
 
         <section className="service-area-content section">
           <div>
-            <p className="eyebrow">St. Petersburg coverage</p>
-            <h2>Neighborhoods<br /><em>across the city.</em></h2>
-            <p>From central St. Pete to waterfront and west-side neighborhoods, our service area includes homes across the city. Commonly recognized neighborhoods within our primary St. Petersburg market include:</p>
+            <p className="eyebrow">Our service area</p>
+            <h2>Local care,<br /><em>from city to shore.</em></h2>
+            <p>From homes in St. Petersburg and Gulfport to beach communities along the Gulf, our team brings reliable, detail-minded cleaning to these local areas:</p>
           </div>
           <ul className="area-list">
-            {neighborhoods.map((area) => <li key={area}><MapPin size={18} aria-hidden="true" /> {area}</li>)}
+            {serviceAreas.map((area) => <li key={area}><MapPin size={18} aria-hidden="true" /> {area}</li>)}
           </ul>
         </section>
 

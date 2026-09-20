@@ -48,7 +48,6 @@ export function SiteHeader() {
           </div>
         </div>
         <a href="/about" onClick={closeMenu}>About</a>
-        <a href="/service-areas" onClick={closeMenu}>Service Areas</a>
         <a href="/#reviews" onClick={closeMenu}>Reviews</a>
         <a href="/faq" onClick={closeMenu}>FAQ</a>
         <a href="/apply" onClick={closeMenu}>Join Our Team</a>

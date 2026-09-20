@@ -204,10 +204,14 @@ img { display: block; max-width: 100%; }
 .big-quote { position: absolute; top: 12px; left: 35px; color: var(--sun); font-family: Georgia, serif; font-size: 130px; line-height: 1; }
 .review-slide { display: flex; flex-direction: column; justify-content: center; animation: review-in .55s cubic-bezier(.2,.8,.2,1) both; }
 @keyframes review-in { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: translateX(0); } }
-.review-quote blockquote { margin: 28px 0; font-family: var(--display); font-size: clamp(32px, 3.4vw, 55px); font-weight: 600; line-height: 1.12; text-transform: uppercase; }
+.review-quote blockquote { margin: 28px 0; font-family: var(--display); font-size: clamp(32px, 3.4vw, 55px); font-weight: 600; line-height: 1.12; }
 .stars.coral { justify-content: flex-start; color: var(--coral); }
 .reviewer { margin: 0; font-weight: 800; }
 .reviewer span { margin-left: 8px; color: var(--palm-dark); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.review-title { margin: 16px 0 -12px; font-family: var(--display); font-size: 18px; font-weight: 800; }
+.google-reviews-link { align-self: flex-start; margin-top: 28px; }
+.google-attribution { margin-top: 14px; font-size: 11px; font-weight: 700; letter-spacing: .06em; }
+.review-stat .google-rating { font-size: clamp(28px, 3vw, 40px); }
 .review-controls { position: absolute; right: 28px; bottom: 25px; display: flex; gap: 8px; }
 .review-controls button { width: 11px; height: 11px; padding: 0; border: 2px solid var(--ink); border-radius: 50%; background: transparent; cursor: pointer; transition: background .2s ease, transform .2s ease; }
 .review-controls button:hover, .review-controls button.is-active { background: var(--coral); transform: scale(1.16); }
