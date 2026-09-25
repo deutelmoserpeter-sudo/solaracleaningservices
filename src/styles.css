@@ -287,6 +287,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .footer-bottom { grid-column: 1 / -1; margin-top: 8px; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 25px; border-top: 1px solid rgba(255,255,255,.18); color: #888882; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
 .footer-bottom a { color: var(--white); text-decoration: underline; text-decoration-color: rgba(248,216,23,.55); text-underline-offset: 4px; transition: color .2s ease, text-decoration-color .2s ease; }
 .footer-bottom a:hover { color: var(--sun); text-decoration-color: var(--sun); }
+.footer-legal { display: flex; align-items: center; justify-content: center; gap: 22px; }
 
 .privacy-hero { position: relative; isolation: isolate; min-height: 650px; padding: 170px clamp(24px, 7vw, 120px) 100px; display: grid; align-items: center; border-bottom: 2px solid var(--ink); background: linear-gradient(112deg, var(--paper) 0 68%, var(--pink-soft) 68% 100%); overflow: hidden; }
 .privacy-rays { position: absolute; z-index: -1; top: -390px; right: -300px; width: 900px; aspect-ratio: 1; border-radius: 50%; opacity: .22; background: repeating-conic-gradient(from 8deg, var(--coral) 0deg 8deg, transparent 8deg 20deg); animation: drift 45s linear infinite; }
@@ -309,6 +310,9 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .privacy-policy li { padding-left: 5px; }
 .privacy-contact { padding: 32px !important; border: 2px solid var(--ink) !important; background: var(--sea); box-shadow: 8px 8px 0 var(--ink); }
 .privacy-contact a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.privacy-policy > section > p a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.terms-hero { background: linear-gradient(112deg, var(--paper) 0 68%, #d9eee8 68% 100%); }
+.terms-summary { background: var(--sea); box-shadow: 9px 9px 0 var(--coral); }
 
 .apply-hero { position: relative; min-height: 720px; padding: 150px clamp(24px, 7vw, 120px) 105px; display: grid; grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr); align-items: center; gap: clamp(60px, 9vw, 145px); overflow: hidden; background: var(--sun-soft); }
 .apply-hero-rays { position: absolute; top: -340px; left: -340px; width: 800px; height: 800px; border-radius: 50%; opacity: .16; background: repeating-conic-gradient(from 8deg, var(--coral) 0deg 11deg, transparent 11deg 25deg); animation: drift 55s linear infinite; }
@@ -635,6 +639,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .privacy-policy section { padding-bottom: 36px; margin-bottom: 36px; }
   .privacy-policy p, .privacy-policy li { font-size: 15px; line-height: 1.75; }
   .privacy-contact { padding: 26px 22px !important; }
+  .terms-hero { background: linear-gradient(145deg, var(--paper) 0 78%, #d9eee8 78% 100%); }
   .other-service-links { grid-template-columns: 1fr; }
   .other-service-links a:nth-child(odd) { border-right: 0; }
   .about { gap: 60px; }
@@ -671,6 +676,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .footer-brand, .cleaner-callout { grid-column: 1 / -1; }
   .cleaner-callout { padding: 26px 22px; flex-direction: column; align-items: flex-start; gap: 20px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .footer-legal { justify-content: flex-start; flex-wrap: wrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
