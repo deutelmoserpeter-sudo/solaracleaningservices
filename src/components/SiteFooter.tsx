@@ -20,7 +20,7 @@ export function SiteFooter({ commercial = false }: SiteFooterProps) {
         <div><h3>Become a Cleaner</h3><p>Looking for flexible cleaning work? Partner with us to provide professional cleaning services across St. Pete.</p></div>
         <Link className="button cleaner-button" to="/apply">Apply Now <ArrowRight size={17} /></Link>
       </div>
-      <div className="footer-bottom"><span>© 2026 Solara Cleaning Services</span><span>Insured · Detail obsessed · Locally loved</span></div>
+      <div className="footer-bottom"><span>© 2026 Solara Cleaning Services</span><div className="footer-legal"><Link to="/privacy">Privacy Policy</Link><Link to="/terms">Terms of Service</Link></div><span>Insured · Detail obsessed · Locally loved</span></div>
     </footer>
   )
 }

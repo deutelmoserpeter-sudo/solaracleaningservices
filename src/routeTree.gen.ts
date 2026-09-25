@@ -14,6 +14,8 @@ import { Route as BookNowRouteImport } from './routes/book-now'
 import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ServicesServiceSlugRouteImport } from './routes/services.$serviceSlug'
 import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 
@@ -42,6 +44,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesServiceSlugRoute = ServicesServiceSlugRouteImport.update({
   id: '/services/$serviceSlug',
   path: '/services/$serviceSlug',
@@ -59,6 +71,8 @@ export interface FileRoutesByFullPath {
   '/apply': typeof ApplyRoute
   '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
 }
@@ -68,6 +82,8 @@ export interface FileRoutesByTo {
   '/apply': typeof ApplyRoute
   '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
 }
@@ -78,16 +94,18 @@ export interface FileRoutesById {
   '/apply': typeof ApplyRoute
   '/book-now': typeof BookNowRoute
   '/faq': typeof FaqRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/services/$serviceSlug': typeof ServicesServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/service-areas' | '/services/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/services/$serviceSlug'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/service-areas' | '/services/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/services/$serviceSlug'
   id:
     | '__root__'
     | '/'
@@ -95,6 +113,8 @@ export interface FileRouteTypes {
     | '/apply'
     | '/book-now'
     | '/faq'
+    | '/privacy'
+    | '/terms'
     | '/services/$serviceSlug'
     | '/service-areas'
   fileRoutesById: FileRoutesById
@@ -105,6 +125,8 @@ export interface RootRouteChildren {
   ApplyRoute: typeof ApplyRoute
   BookNowRoute: typeof BookNowRoute
   FaqRoute: typeof FaqRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
   ServicesServiceSlugRoute: typeof ServicesServiceSlugRoute
   ServiceAreasRoute: typeof ServiceAreasRoute
 }
@@ -116,6 +138,20 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/book-now': {
@@ -169,6 +205,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApplyRoute: ApplyRoute,
   BookNowRoute: BookNowRoute,
   FaqRoute: FaqRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
   ServicesServiceSlugRoute: ServicesServiceSlugRoute,
   ServiceAreasRoute: ServiceAreasRoute,
 }
