@@ -361,9 +361,9 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .service-tone-01 .service-detail-note { background: var(--sun); }
 .service-tone-02 .service-detail-note { background: var(--pink); }
 .service-tone-03 .service-detail-note { background: var(--sea); }
-.service-tone-04 .service-detail-note { background: var(--move-green); }
+.service-tone-04 .service-detail-note { background: var(--blue); }
 .service-tone-05 .service-detail-note { background: var(--sun-soft); }
-.service-tone-06 .service-detail-note { background: var(--blue); }
+.service-tone-06 .service-detail-note { background: var(--move-green); }
 .service-tone-02 { background: linear-gradient(112deg, var(--paper) 0 62%, var(--sea) 62% 100%); }
 .service-tone-03 { background: linear-gradient(112deg, var(--paper) 0 62%, var(--sun-soft) 62% 100%); }
 .service-tone-04 { background: linear-gradient(112deg, var(--paper) 0 62%, #ddf3d9 62% 100%); }
