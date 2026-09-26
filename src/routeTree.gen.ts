@@ -16,7 +16,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as ServicesServiceSlugRouteImport } from './routes/services.$serviceSlug'
+import { Route as ServiceSlugRouteImport } from './routes/$serviceSlug'
 import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 
 const FaqRoute = FaqRouteImport.update({
@@ -54,9 +54,9 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesServiceSlugRoute = ServicesServiceSlugRouteImport.update({
-  id: '/services/$serviceSlug',
-  path: '/services/$serviceSlug',
+const ServiceSlugRoute = ServiceSlugRouteImport.update({
+  id: '/$serviceSlug',
+  path: '/$serviceSlug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServiceAreasRoute = ServiceAreasRouteImport.update({
@@ -73,7 +73,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
-  '/services/$serviceSlug': typeof ServicesServiceSlugRoute
+  '/$serviceSlug': typeof ServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRoutesByTo {
@@ -84,7 +84,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
-  '/services/$serviceSlug': typeof ServicesServiceSlugRoute
+  '/$serviceSlug': typeof ServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRoutesById {
@@ -96,16 +96,16 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
-  '/services/$serviceSlug': typeof ServicesServiceSlugRoute
+  '/$serviceSlug': typeof ServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/services/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/$serviceSlug'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/services/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/$serviceSlug'
   id:
     | '__root__'
     | '/'
@@ -115,7 +115,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/privacy'
     | '/terms'
-    | '/services/$serviceSlug'
+    | '/$serviceSlug'
     | '/service-areas'
   fileRoutesById: FileRoutesById
 }
@@ -127,7 +127,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
-  ServicesServiceSlugRoute: typeof ServicesServiceSlugRoute
+  ServiceSlugRoute: typeof ServiceSlugRoute
   ServiceAreasRoute: typeof ServiceAreasRoute
 }
 
@@ -182,11 +182,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/$serviceSlug': {
-      id: '/services/$serviceSlug'
-      path: '/services/$serviceSlug'
-      fullPath: '/services/$serviceSlug'
-      preLoaderRoute: typeof ServicesServiceSlugRouteImport
+    '/$serviceSlug': {
+      id: '/$serviceSlug'
+      path: '/$serviceSlug'
+      fullPath: '/$serviceSlug'
+      preLoaderRoute: typeof ServiceSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/service-areas': {
@@ -207,7 +207,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
-  ServicesServiceSlugRoute: ServicesServiceSlugRoute,
+  ServiceSlugRoute: ServiceSlugRoute,
   ServiceAreasRoute: ServiceAreasRoute,
 }
 export const routeTree = rootRouteImport

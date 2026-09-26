@@ -105,7 +105,7 @@ function HomePage() {
         email: 'hello@solaracleaningfl.com',
         description: 'Professional residential and small-office cleaning serving St. Petersburg and surrounding areas in Pinellas County, Florida.',
         areaServed: { '@type': 'AdministrativeArea', name: 'Pinellas County, Florida' },
-        hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Cleaning services', itemListElement: services.map((service) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: service.title, url: `https://solaracleaningfl.com/services/${service.slug}` } })) },
+        hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Cleaning services', itemListElement: services.map((service) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: service.title, url: `https://solaracleaningfl.com/${service.slug}/` } })) },
       }).replace(/</g, '\\u003c') }} />
       <div className="announcement">
         <span>Now welcoming new recurring clients</span>
@@ -168,7 +168,7 @@ function HomePage() {
 
           <div className="service-list">
             {services.map((service) => (
-              <a className="service-card" href={`/services/${service.slug}`} key={service.number}>
+              <a className="service-card" href={`/${service.slug}/`} key={service.number}>
                 <div className="service-card-top">
                   <span className="service-number">{service.number}</span>
                   <span className="service-card-arrow" aria-hidden="true"><ArrowRight /></span>

@@ -39,7 +39,7 @@ export function SiteHeader() {
             {services.map((service) => {
               const ServiceIcon = service.icon
               return (
-                <a href={`/services/${service.slug}`} key={service.slug} onClick={closeMenu}>
+                <a href={`/${service.slug}/`} key={service.slug} onClick={closeMenu}>
                   <ServiceIcon size={18} aria-hidden="true" />
                   <span>{service.title}</span>
                 </a>
