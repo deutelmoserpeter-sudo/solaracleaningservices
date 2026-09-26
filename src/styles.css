@@ -459,6 +459,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .booking-embed iframe { width: 100%; height: 1000px; display: block; border: 0; background: #fff; }
 
 @media (min-width: 981px) {
+  .service-detail-copy { align-self: start; padding-top: 20px; }
   .nav-services:hover .services-dropdown, .nav-services:focus-within .services-dropdown { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
   .nav-services:hover .services-trigger svg, .nav-services:focus-within .services-trigger svg { transform: rotate(180deg); }
 }
