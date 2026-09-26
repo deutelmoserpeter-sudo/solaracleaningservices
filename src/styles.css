@@ -7,6 +7,7 @@
   --palm: #45c979;
   --palm-dark: #0f4c34;
   --sea: #78d7c7;
+  --blue: #75bce8;
   --coral: #ef8f76;
   --pink: #f1a9ba;
   --pink-soft: #f8d6df;
@@ -354,10 +355,15 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .service-detail-visual { position: relative; justify-self: end; width: min(100%, 580px); }
 .service-detail-photo { padding: 12px; border: 2px solid var(--ink); background: var(--white); box-shadow: 15px 15px 0 var(--ink); transform: rotate(2deg); }
 .service-detail-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.9) contrast(1.03); }
-.photo-credit { display: block; padding: 9px 4px 0; color: rgba(11, 43, 34, .72); font-size: 9px; line-height: 1.3; text-align: right; }
 .service-icon-stamp { position: absolute; bottom: -42px; left: -48px; width: 145px; aspect-ratio: 1; display: grid; place-content: center; justify-items: center; gap: 8px; border: 2px solid var(--ink); border-radius: 50%; background: var(--sun); box-shadow: 6px 6px 0 var(--ink); transform: rotate(-8deg); }
 .service-icon-stamp span { font-family: var(--display); font-size: 22px; font-weight: 700; }
 .service-detail-note { position: absolute; top: -32px; right: -15px; padding: 8px 17px; background: var(--coral); color: var(--ink); font-family: var(--script); font-size: 22px; transform: rotate(4deg); }
+.service-tone-01 .service-detail-note { background: var(--sun); }
+.service-tone-02 .service-detail-note { background: var(--pink); }
+.service-tone-03 .service-detail-note { background: var(--sea); }
+.service-tone-04 .service-detail-note { background: var(--move-green); }
+.service-tone-05 .service-detail-note { background: var(--sun-soft); }
+.service-tone-06 .service-detail-note { background: var(--blue); }
 .service-tone-02 { background: linear-gradient(112deg, var(--paper) 0 62%, var(--sea) 62% 100%); }
 .service-tone-03 { background: linear-gradient(112deg, var(--paper) 0 62%, var(--sun-soft) 62% 100%); }
 .service-tone-04 { background: linear-gradient(112deg, var(--paper) 0 62%, #ddf3d9 62% 100%); }
