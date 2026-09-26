@@ -90,12 +90,6 @@ function ServicePage() {
           <div className="service-detail-visual">
             <div className="service-detail-photo">
               <img src={service.image} alt={service.slug === 'post-construction-cleaning' ? 'Renovated interior ready for post-construction cleaning' : service.slug === 'office-cleaning' ? 'Bright office workspace prepared for cleaning' : 'Cleaning professional caring for a bright, tidy space'} width={imageWidth} height={imageHeight} loading="eager" fetchPriority="high" />
-              {service.slug === 'office-cleaning' && (
-                <small className="photo-credit">Photo: Ingridinsydney / CC BY-SA 4.0</small>
-              )}
-              {service.slug === 'post-construction-cleaning' && (
-                <small className="photo-credit">Photo: Sergej Majboroda / Poly Haven / CC0</small>
-              )}
             </div>
             <div className="service-icon-stamp">
               <ServiceIcon size={34} aria-hidden="true" />

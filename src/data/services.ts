@@ -42,7 +42,7 @@ export const services: CleaningService[] = [
     intro: 'Reliable care for a home that feels fresh, comfortable, and ready for everyday life.',
     description: 'Our standard cleaning service handles the essential details that make your home feel noticeably lighter. We work through kitchens, bathrooms, bedrooms, and living spaces with a consistent checklist and careful attention to high-touch areas.',
     idealFor: 'Busy households, occasional resets, and homes that need dependable professional upkeep.',
-    image: '/images/cleaning-sun.jpg',
+    image: '/images/standard-cleaning-540.jpg',
     icon: House,
     includes: ['Dusting & wiping of accessible surfaces', 'Kitchens cleaned, including counters & exterior appliances', 'Bathrooms cleaned, including toilets inside & out, showers & tubs', 'Floors vacuumed, swept & mopped', 'Trash removal & high-touch surfaces cleaned'],
     includeGroups: [
@@ -114,7 +114,7 @@ export const services: CleaningService[] = [
     intro: 'A more detailed reset for the corners, buildup, and overlooked areas that deserve extra attention.',
     description: 'Deep cleaning gives your home a comprehensive refresh beyond routine maintenance. The team spends additional time on detail work, buildup, baseboards, fixtures, and frequently missed surfaces so every room feels renewed.',
     idealFor: 'First-time clients, seasonal cleaning, special occasions, or homes overdue for a thorough reset.',
-    image: '/images/clean-home-540.jpg',
+    image: '/images/deep-cleaning-540.jpg',
     icon: SprayCan,
     includes: ['Everything in Standard Cleaning', 'Baseboards, trim & doors thoroughly cleaned', 'Cabinet fronts, drawers & detailed surfaces cleaned', 'Interior window glass, sills & frames cleaned', 'Light fixtures, ceiling fans & vents dusted', 'Hard-to-reach areas, corners & buildup detailed'],
     includeGroups: [
@@ -207,7 +207,7 @@ export const services: CleaningService[] = [
     intro: 'Consistent cleaning on a schedule that keeps your home ready without taking over your free time.',
     description: 'Recurring service creates an easy rhythm for your home. After learning your priorities, we return on a weekly, biweekly, or monthly schedule with a consistent plan that keeps mess and buildup from piling up.',
     idealFor: 'Families, professionals, pet owners, and anyone who wants cleaning handled on a reliable schedule.',
-    image: '/images/hero-cleaning-540.jpg',
+    image: '/images/recurring-cleaning-540.jpg',
     icon: CalendarDays,
     includes: ['A schedule shaped around your household', 'Consistent room-by-room checklist', 'Priority notes saved for future visits', 'Routine kitchen and bathroom care', 'Weekly, biweekly, or monthly options'],
     includeGroups: [
@@ -274,7 +274,7 @@ export const services: CleaningService[] = [
     intro: 'A thorough empty-space clean for a smoother handoff, a fresh arrival, and one less moving-day task.',
     description: 'Moving is demanding enough without worrying about the final clean. We focus on empty cabinets, appliances, bathrooms, floors, and the details that help a home feel move-in ready for you, a buyer, or the next tenant.',
     idealFor: 'Renters, homeowners, property managers, and anyone preparing an empty home for its next chapter.',
-    image: '/images/team-cleaning-540.jpg',
+    image: '/images/move-in-out-cleaning-540.jpg',
     icon: KeyRound,
     includes: ['Detailed kitchens and bathrooms', 'Inside empty cabinets, drawers & closets', 'Baseboards, doors, trim & reachable surfaces', 'Floors vacuumed, swept & mopped', 'Appliance exteriors cleaned', 'Interior windows & glass cleaned', 'Light fixtures, switches & door handles cleaned', 'Dust, dirt & buildup removed throughout'],
     includeGroups: [
