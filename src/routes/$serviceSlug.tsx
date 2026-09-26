@@ -7,12 +7,12 @@ import { SunMark } from '../components/SunMark'
 import { FaqList } from '../components/FaqList'
 import { getServiceBySlug, services } from '../data/services'
 
-export const Route = createFileRoute('/services/$serviceSlug')({
+export const Route = createFileRoute('/$serviceSlug')({
   component: ServicePage,
   head: ({ params }) => {
     const service = getServiceBySlug(params.serviceSlug)
     if (!service) return { meta: [{ title: 'Service Not Found | Solara Cleaning' }, { name: 'robots', content: 'noindex' }] }
-    const url = `https://solaracleaningfl.com/services/${service.slug}`
+    const url = `https://solaracleaningfl.com/${service.slug}/`
     return {
       meta: [
         { title: service.seoTitle },
@@ -52,7 +52,7 @@ function ServicePage() {
     'move-in-out-cleaning': [1400, 1050], 'office-cleaning': [540, 960], 'post-construction-cleaning': [1024, 768],
   }
   const [imageWidth, imageHeight] = imageDimensions[service.slug]
-  const pageUrl = `https://solaracleaningfl.com/services/${service.slug}`
+  const pageUrl = `https://solaracleaningfl.com/${service.slug}/`
   const structuredData = [
     { '@context': 'https://schema.org', '@type': 'Service', name: service.h1, description: service.description, url: pageUrl, serviceType: service.title, provider: { '@type': 'LocalBusiness', '@id': 'https://solaracleaningfl.com/#business', name: 'Solara Cleaning Services', url: 'https://solaracleaningfl.com/', telephone: '+1-727-594-8636' }, areaServed: { '@type': 'AdministrativeArea', name: 'Pinellas County, Florida' } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -146,7 +146,7 @@ function ServicePage() {
             {services.filter((item) => item.slug !== service.slug).map((item) => {
               const OtherIcon = item.icon
               return (
-                <a href={`/services/${item.slug}`} key={item.slug}>
+                <a href={`/${item.slug}/`} key={item.slug}>
                   <OtherIcon size={22} aria-hidden="true" />
                   <span>{item.title}</span>
                   <ArrowRight size={19} />

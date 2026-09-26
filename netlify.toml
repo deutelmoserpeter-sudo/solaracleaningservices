@@ -5,3 +5,33 @@
   command = "npm run dev"
   targetPort = 3000
   port = 8888
+
+[[redirects]]
+  from = "/services/standard-cleaning"
+  to = "/standard-cleaning/"
+  status = 301
+
+[[redirects]]
+  from = "/services/deep-cleaning"
+  to = "/deep-cleaning/"
+  status = 301
+
+[[redirects]]
+  from = "/services/recurring-cleaning"
+  to = "/recurring-cleaning/"
+  status = 301
+
+[[redirects]]
+  from = "/services/move-in-out-cleaning"
+  to = "/move-in-out-cleaning/"
+  status = 301
+
+[[redirects]]
+  from = "/services/office-cleaning"
+  to = "/office-cleaning/"
+  status = 301
+
+[[redirects]]
+  from = "/services/post-construction-cleaning"
+  to = "/post-construction-cleaning/"
+  status = 301

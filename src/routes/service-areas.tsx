@@ -67,7 +67,7 @@ function ServiceAreasPage() {
           <div className="other-service-links">
             {services.map((service) => {
               const Icon = service.icon
-              return <a href={`/services/${service.slug}`} key={service.slug}><Icon size={22} aria-hidden="true" /><span>{service.title}</span><ArrowRight size={19} /></a>
+              return <a href={`/${service.slug}/`} key={service.slug}><Icon size={22} aria-hidden="true" /><span>{service.title}</span><ArrowRight size={19} /></a>
             })}
           </div>
         </section>
