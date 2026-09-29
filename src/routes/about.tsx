@@ -15,7 +15,7 @@ export const Route = createFileRoute('/about')({
       { property: 'og:description', content: 'Meet the local Solara team providing thoughtful residential cleaning across St. Petersburg, Florida.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/about' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/team-cleaning.jpg' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/about' }],
   }),
