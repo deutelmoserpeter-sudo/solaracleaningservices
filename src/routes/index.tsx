@@ -45,7 +45,7 @@ export const Route = createFileRoute('/')({
       { property: 'og:description', content: 'Professional residential cleaning in St. Petersburg and nearby Pinellas County communities. Get an instant quote online.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/hero-cleaning.jpg' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/' }],
   }),

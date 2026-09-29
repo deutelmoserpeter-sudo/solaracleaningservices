@@ -21,7 +21,7 @@ export const Route = createFileRoute('/$serviceSlug')({
         { property: 'og:description', content: service.metaDescription },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: url },
-        { property: 'og:image', content: `https://solaracleaningfl.com${service.image}` },
+        { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share.png' },
       ],
       links: [{ rel: 'canonical', href: url }],
     }
