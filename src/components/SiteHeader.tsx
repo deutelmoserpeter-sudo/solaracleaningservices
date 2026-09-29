@@ -36,15 +36,24 @@ export function SiteHeader() {
             Services <ChevronDown size={15} />
           </button>
           <div className="services-dropdown" id="services-menu">
+            <div className="services-dropdown-heading">
+              <span>Cleaning services</span>
+            </div>
+            <div className="services-dropdown-grid">
             {services.map((service) => {
               const ServiceIcon = service.icon
               return (
                 <a href={`/${service.slug}/`} key={service.slug} onClick={closeMenu}>
-                  <ServiceIcon size={18} aria-hidden="true" />
-                  <span>{service.title}</span>
+                  <span className="service-menu-number">{service.number}</span>
+                  <span className="service-menu-icon"><ServiceIcon size={19} aria-hidden="true" /></span>
+                  <span className="service-menu-copy">
+                    <strong>{service.title}</strong>
+                  </span>
+                  <ArrowRight className="service-menu-arrow" size={16} aria-hidden="true" />
                 </a>
               )
             })}
+            </div>
           </div>
         </div>
         <a href="/about" onClick={closeMenu}>About</a>

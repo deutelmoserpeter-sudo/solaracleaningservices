@@ -49,11 +49,23 @@ img { display: block; max-width: 100%; }
 .services-trigger { display: inline-flex; align-items: center; gap: 5px; padding: 10px 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
 .services-trigger svg { transition: transform .2s ease; }
 .nav-services.is-open .services-trigger svg { transform: rotate(180deg); }
-.services-dropdown { position: absolute; z-index: 40; top: calc(100% + 14px); left: 50%; width: 300px; padding: 9px; display: grid; gap: 2px; border: 2px solid var(--ink); background: var(--white); box-shadow: 9px 9px 0 var(--ink); opacity: 0; visibility: hidden; transform: translate(-50%, -8px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+.services-dropdown { position: absolute; z-index: 40; top: calc(100% + 10px); left: 50%; width: min(520px, calc(100vw - 40px)); padding: 16px; display: grid; border: 1px solid rgba(11,43,34,.22); border-radius: 4px; background: var(--white); color: var(--ink); box-shadow: 0 16px 40px rgba(11,43,34,.16); opacity: 0; visibility: hidden; overflow: hidden; transform: translate(-50%, -6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
 .services-dropdown::before { content: ''; position: absolute; bottom: 100%; left: 0; width: 100%; height: 16px; }
-.services-dropdown a { display: grid; grid-template-columns: 30px 1fr; align-items: center; gap: 9px; padding: 12px; font-size: 12px; font-weight: 700; transition: background .2s ease, transform .2s ease; }
-.services-dropdown a svg { color: var(--palm-dark); }
-.services-dropdown a:hover, .services-dropdown a:focus-visible { background: var(--sun); transform: translateX(3px); }
+.services-dropdown-heading { padding: 0 2px 11px; border-bottom: 1px solid var(--line); }
+.services-dropdown-heading span { color: var(--palm-dark); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.services-dropdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding-top: 8px; }
+.services-dropdown-grid > a { position: relative; min-width: 0; padding: 9px 10px; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; gap: 10px; border: 0; border-radius: 3px; background: transparent; transition: background .16s ease; }
+.services-dropdown-grid > a:nth-child(n) { background: transparent; }
+.service-menu-number { display: none; }
+.service-menu-icon { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(15,76,52,.16); border-radius: 3px; background: #edf4ec; color: var(--palm-dark); transition: background .16s ease; }
+.service-menu-copy { min-width: 0; display: grid; gap: 3px; }
+.service-menu-copy strong { color: var(--ink); font-size: 11px; line-height: 1.3; }
+.service-menu-arrow { color: var(--palm-dark); opacity: 0; transition: opacity .16s ease, transform .16s ease; }
+.services-dropdown-grid > a:hover, .services-dropdown-grid > a:focus-visible { color: var(--ink); background: var(--paper); filter: none; transform: none; }
+.services-dropdown-grid > a:focus-visible { outline-color: var(--palm-dark); }
+.services-dropdown-grid > a:hover .service-menu-copy strong, .services-dropdown-grid > a:focus-visible .service-menu-copy strong { color: var(--ink); }
+.services-dropdown-grid > a:hover .service-menu-icon, .services-dropdown-grid > a:focus-visible .service-menu-icon { background: var(--sun-soft); color: var(--palm-dark); transform: none; }
+.services-dropdown-grid > a:hover .service-menu-arrow, .services-dropdown-grid > a:focus-visible .service-menu-arrow { opacity: 1; transform: translateX(1px); }
 .nav-services.is-open .services-dropdown { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
 
 .button { min-height: 58px; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; border: 2px solid var(--ink); background: var(--sun); color: var(--ink); font-size: 14px; font-weight: 700; letter-spacing: .01em; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
@@ -539,10 +551,15 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .mobile-quote { display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: fit-content; padding: 14px 18px; border: 2px solid var(--ink); background: var(--ink); color: var(--white); font-family: var(--sans); font-size: 14px; }
   .nav-services { width: 100%; }
   .services-trigger { width: 100%; justify-content: space-between; font-family: inherit; text-transform: uppercase; }
-  .services-dropdown { position: static; width: 100%; max-height: 0; padding: 0; gap: 0; border: 0; box-shadow: none; background: var(--white); opacity: 1; visibility: visible; overflow: hidden; transform: none; transition: max-height .3s ease, padding .3s ease, margin .3s ease; }
-  .nav-services.is-open .services-dropdown { max-height: 340px; margin-top: 8px; padding: 8px; border: 2px solid var(--ink); transform: none; }
+  .services-dropdown { position: static; width: 100%; max-height: 0; padding: 0 12px; border: 0; border-radius: 0; box-shadow: none; background: var(--white); color: var(--ink); opacity: 1; visibility: visible; overflow: hidden; transform: none; transition: max-height .3s ease, margin .3s ease, padding .3s ease; }
+  .nav-services.is-open .services-dropdown { max-height: 600px; margin-top: 8px; padding: 10px 12px 12px; border: 1px solid rgba(11,43,34,.28); transform: none; }
   .services-dropdown::before { display: none; }
-  .services-dropdown a { padding: 9px 12px; font-family: var(--sans); font-size: 12px; text-transform: none; }
+  .services-dropdown-heading { display: none; }
+  .services-dropdown-grid { grid-template-columns: 1fr; gap: 2px; }
+  .services-dropdown-grid > a { min-height: 0; padding: 8px 10px; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; font-family: var(--sans); text-transform: none; }
+  .service-menu-number { display: none; }
+  .service-menu-icon { width: 30px; height: 30px; }
+  .service-menu-copy strong { max-width: none; font-family: var(--sans); font-size: 11px; text-transform: none; }
   .main-nav .mobile-phone { display: inline-flex; align-items: center; gap: 10px; margin-top: 0; padding-top: 18px; border-top: 2px solid var(--ink); font-family: var(--sans); font-size: 17px; }
   .hero { min-height: auto; padding: 140px 24px 95px; grid-template-columns: 1fr; gap: 85px; }
   .hero-copy { position: relative; isolation: isolate; min-width: 0; width: 100%; }
