@@ -37,7 +37,8 @@ export function SiteHeader() {
           </button>
           <div className="services-dropdown" id="services-menu">
             <div className="services-dropdown-heading">
-              <span>Cleaning services</span>
+              <span>Choose your clean</span>
+              <p>Thoughtful care for every kind of space.</p>
             </div>
             <div className="services-dropdown-grid">
             {services.map((service) => {
