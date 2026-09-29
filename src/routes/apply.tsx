@@ -15,7 +15,7 @@ export const Route = createFileRoute('/apply')({
       { property: 'og:description', content: 'Explore cleaning work with Solara Cleaning Services in the St. Petersburg area.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/apply' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share.png' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/apply' }],
   }),
