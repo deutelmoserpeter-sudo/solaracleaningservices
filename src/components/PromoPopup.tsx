@@ -1,7 +1,7 @@
 import { ArrowRight, Check, Sparkles, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-const PROMO_DISMISSED_KEY = 'solara-first-clean-promo-dismissed'
+const PROMO_DISMISSED_KEY = 'solara-first-clean-promo-dismissed-v2'
 
 export function PromoPopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -12,7 +12,7 @@ export function PromoPopup() {
   useEffect(() => {
     if (window.sessionStorage.getItem(PROMO_DISMISSED_KEY)) return
 
-    const timer = window.setTimeout(() => setIsVisible(true), 900)
+    const timer = window.setTimeout(() => setIsVisible(true), 6_000)
     return () => window.clearTimeout(timer)
   }, [])
 
