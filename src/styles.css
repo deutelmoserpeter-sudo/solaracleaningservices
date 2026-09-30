@@ -304,7 +304,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .footer-bottom a:hover { color: var(--sun); text-decoration-color: var(--sun); }
 .footer-legal { display: flex; align-items: center; justify-content: center; gap: 22px; }
 
-.promo-popup { position: fixed; z-index: 60; right: clamp(18px, 3vw, 42px); bottom: clamp(18px, 3vw, 38px); width: min(390px, calc(100vw - 36px)); padding: 25px 26px 22px; display: grid; grid-template-columns: auto 1fr; gap: 16px 14px; border: 2px solid var(--ink); background: var(--white); color: var(--ink); box-shadow: 10px 10px 0 var(--palm-dark); animation: promo-arrive .5s cubic-bezier(.2,.8,.2,1) both; }
+.promo-popup { position: fixed; z-index: 60; right: clamp(18px, 3vw, 42px); bottom: clamp(18px, 3vw, 38px); width: min(390px, calc(100vw - 36px)); max-height: calc(100vh - 36px); padding: 25px 26px 22px; display: grid; grid-template-columns: auto 1fr; gap: 16px 14px; border: 2px solid var(--ink); background: var(--white); color: var(--ink); box-shadow: 10px 10px 0 var(--palm-dark); overflow-y: auto; animation: promo-arrive .5s cubic-bezier(.2,.8,.2,1) both; }
 .promo-popup::before { content: ''; position: absolute; inset: 0 0 auto; height: 7px; background: var(--sun); }
 .promo-close { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; padding: 0; display: grid; place-items: center; border: 0; background: transparent; color: var(--ink); cursor: pointer; transition: background .2s ease, transform .2s ease; }
 .promo-close:hover { background: var(--sun-soft); transform: rotate(6deg); }
@@ -316,6 +316,19 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .promo-copy > span { margin-top: 8px; display: block; font-size: 12px; line-height: 1.45; }
 .promo-link { grid-column: 1 / -1; min-height: 48px; padding: 0 17px; display: flex; align-items: center; justify-content: space-between; border: 2px solid var(--ink); background: var(--sun); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: background .2s ease, transform .2s ease; }
 .promo-link:hover { background: var(--pink); transform: translateY(-2px); }
+.promo-link { width: 100%; cursor: pointer; }
+.promo-link:disabled { cursor: wait; opacity: .65; transform: none; }
+.promo-form, .promo-success { grid-column: 1 / -1; display: grid; gap: 12px; }
+.promo-form .promo-copy { padding-right: 28px; }
+.promo-form .promo-copy h2 { font-size: 25px; }
+.promo-form label { display: grid; gap: 5px; color: var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.promo-form input { width: 100%; min-height: 42px; padding: 8px 11px; border: 1.5px solid var(--ink); border-radius: 0; background: var(--paper); color: var(--ink); font: 500 15px/1.2 var(--body); outline: none; text-transform: none; }
+.promo-form input:focus { border-color: var(--palm-dark); box-shadow: 0 0 0 3px rgba(48,108,82,.2); }
+.promo-form .promo-link, .promo-success .promo-link { margin-top: 3px; }
+.promo-success { grid-template-columns: auto 1fr; align-items: start; }
+.promo-success .promo-link { grid-column: 1 / -1; }
+.promo-error { margin: 0; color: #9b2f24; font-size: 12px; font-weight: 700; line-height: 1.4; }
+.form-honeypot { position: absolute !important; left: -9999px !important; }
 @keyframes promo-arrive { from { opacity: 0; transform: translateY(28px) rotate(1deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
 
 .privacy-hero { position: relative; isolation: isolate; min-height: 650px; padding: 170px clamp(24px, 7vw, 120px) 100px; display: grid; align-items: center; border-bottom: 2px solid var(--ink); background: linear-gradient(112deg, var(--paper) 0 68%, var(--pink-soft) 68% 100%); overflow: hidden; }
