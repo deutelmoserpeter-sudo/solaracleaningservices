@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, Menu, Phone, X } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, ChevronDown, Menu, Phone, X } from 'lucide-react'
 import { useState } from 'react'
 
 import { services } from '../data/services'
@@ -64,7 +64,7 @@ export function SiteHeader() {
         <a className="mobile-quote" href="/book-now" onClick={closeMenu}>BOOK NOW <ArrowRight size={17} /></a>
         <div className="mobile-contact">
           <a className="mobile-phone" href="tel:+17275948636" onClick={closeMenu}><Phone size={18} /> (727) 594-8636</a>
-          <a className="mobile-cleaner-link" href="/apply" onClick={closeMenu}>Become a Cleaner</a>
+          <a className="mobile-cleaner-link" href="/apply" onClick={closeMenu}><BriefcaseBusiness size={17} aria-hidden="true" /> Careers</a>
         </div>
       </nav>
 
