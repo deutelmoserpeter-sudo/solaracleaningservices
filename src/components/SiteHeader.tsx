@@ -60,9 +60,12 @@ export function SiteHeader() {
         <a href="/about" onClick={closeMenu}>About</a>
         <a href="/#reviews" onClick={closeMenu}>Reviews</a>
         <a href="/faq" onClick={closeMenu}>FAQ</a>
-        <a href="/apply" onClick={closeMenu}>Join Our Team</a>
+        <a className="desktop-team-link" href="/apply" onClick={closeMenu}>Join Our Team</a>
         <a className="mobile-quote" href="/book-now" onClick={closeMenu}>BOOK NOW <ArrowRight size={17} /></a>
-        <a className="mobile-phone" href="tel:+17275948636" onClick={closeMenu}><Phone size={18} /> (727) 594-8636</a>
+        <div className="mobile-contact">
+          <a className="mobile-phone" href="tel:+17275948636" onClick={closeMenu}><Phone size={18} /> (727) 594-8636</a>
+          <a className="mobile-cleaner-link" href="/apply" onClick={closeMenu}>Become a Cleaner</a>
+        </div>
       </nav>
 
       <div className="header-actions">

@@ -79,7 +79,7 @@ img { display: block; max-width: 100%; }
 .header-actions { display: flex; align-items: center; gap: clamp(14px, 1.4vw, 24px); }
 .header-phone { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; white-space: nowrap; }
 .header-phone:hover { color: var(--palm-dark); }
-.mobile-phone { display: none; }
+.mobile-contact { display: none; }
 .text-link { display: inline-flex; align-items: center; gap: 9px; padding: 8px 0 5px; border-bottom: 2px solid var(--ink); font-weight: 700; }
 
 .hero { position: relative; isolation: isolate; min-height: max(760px, 100svh); padding: 120px clamp(24px, 7vw, 120px) 50px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr); align-items: center; gap: 6vw; background: radial-gradient(circle at 90% 10%, rgba(248, 216, 23, .82) 0 13%, transparent 13.2%), linear-gradient(115deg, var(--paper) 0 62%, #ddf3d9 62% 100%); }
@@ -563,7 +563,10 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .service-menu-number { display: none; }
   .service-menu-icon { width: 34px; height: 34px; }
   .service-menu-copy strong { max-width: none; font-family: var(--display); font-size: 15px; text-transform: none; }
-  .main-nav .mobile-phone { display: inline-flex; align-items: center; gap: 10px; margin-top: 0; padding-top: 18px; border-top: 2px solid var(--ink); font-family: var(--sans); font-size: 17px; }
+  .main-nav .desktop-team-link { display: none; }
+  .main-nav .mobile-contact { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; margin-top: 0; padding-top: 18px; border-top: 2px solid var(--ink); font-family: var(--sans); text-transform: none; }
+  .main-nav .mobile-phone { display: inline-flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; }
+  .main-nav .mobile-cleaner-link { margin-left: 28px; font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
   .hero { min-height: auto; padding: 140px 24px 95px; grid-template-columns: 1fr; gap: 85px; }
   .hero-copy { position: relative; isolation: isolate; min-width: 0; width: 100%; }
   .hero-copy > *:not(.mobile-home-rays) { position: relative; z-index: 1; }
