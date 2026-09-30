@@ -30,6 +30,13 @@ function BlogPage() {
     description: 'Cleaning tips and home care guides from Solara Cleaning Services.',
     url: 'https://solaracleaningfl.com/blog/',
     publisher: { '@type': 'Organization', name: 'Solara Cleaning Services', url: 'https://solaracleaningfl.com/' },
+    blogPost: blogPosts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      url: `https://solaracleaningfl.com/blog/${post.slug}/`,
+    })),
   }
 
   return (
