@@ -7,6 +7,7 @@ export function PromoPopup() {
   const [isVisible, setIsVisible] = useState(false)
   const [isClaiming, setIsClaiming] = useState(false)
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [couponEmailed, setCouponEmailed] = useState(false)
 
   useEffect(() => {
     if (window.sessionStorage.getItem(PROMO_DISMISSED_KEY)) return
@@ -46,9 +47,11 @@ export function PromoPopup() {
         }),
       })
       if (!emailResponse.ok) throw new Error('Unable to send coupon')
+      const emailResult = await emailResponse.json() as { sent?: boolean }
 
       form.reset()
       window.sessionStorage.setItem(PROMO_DISMISSED_KEY, 'true')
+      setCouponEmailed(emailResult.sent === true)
       setStatus('success')
     } catch {
       setStatus('error')
@@ -65,7 +68,11 @@ export function PromoPopup() {
       {status === 'success' ? (
         <div className="promo-success" role="status">
           <span className="promo-icon" aria-hidden="true"><Check size={22} /></span>
-          <div className="promo-copy"><p>Offer claimed</p><h2>Check your <strong>inbox</strong></h2><span>Your Welcome25 coupon is on its way. We can’t wait to brighten your home.</span></div>
+          <div className="promo-copy">
+            <p>Offer claimed</p>
+            <h2>{couponEmailed ? <>Check your <strong>inbox</strong></> : <>Your code is <strong>Welcome25</strong></>}</h2>
+            <span>{couponEmailed ? 'Your coupon is on its way. We can’t wait to brighten your home.' : 'Use WELCOME25 when booking to save $25 on your first clean.'}</span>
+          </div>
           <a className="promo-link" href="/book-now">Book your clean <ArrowRight size={17} aria-hidden="true" /></a>
         </div>
       ) : !isClaiming ? (

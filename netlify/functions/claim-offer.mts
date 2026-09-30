@@ -32,8 +32,8 @@ export default async function claimOffer(request: Request) {
   const apiKey = Netlify.env.get('RESEND_API_KEY')
   const fromAddress = Netlify.env.get('PROMO_EMAIL_FROM')
   if (!apiKey || !fromAddress) {
-    console.error('Coupon email delivery is not configured')
-    return Response.json({ error: 'Email delivery is unavailable' }, { status: 503 })
+    console.warn('Coupon email delivery is not configured; displaying the coupon on site instead')
+    return Response.json({ sent: false })
   }
 
   const response = await fetch('https://api.resend.com/emails', {
@@ -50,7 +50,7 @@ export default async function claimOffer(request: Request) {
 
   if (!response.ok) {
     console.error('Coupon email provider rejected the request', response.status)
-    return Response.json({ error: 'Unable to send coupon' }, { status: 502 })
+    return Response.json({ sent: false })
   }
 
   return Response.json({ sent: true })
