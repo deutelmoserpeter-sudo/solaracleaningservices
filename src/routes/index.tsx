@@ -69,9 +69,9 @@ const googleReviews = [
     text: 'My wife has these guys come by the house every 1-2 weeks and man they are great. I don’t have to spend everyday after work picking up after the kids anymore. These guys do it for me!! I will say I was hesitant at first but their price was so good it became a no brainer.',
   },
   {
-    authorName: 'Connor Stone',
+    authorName: 'Kathleen Maggio',
     rating: 5,
-    text: 'THE ATTENTION TO DETAIL IS INCREDIBLE. EVEN THE LITTLE PLACES I USUALLY FORGET LOOKED FRESH, POLISHED, AND COMPLETELY RESET.',
+    text: 'Ashley was very punctual which I haven’t had with others. She worked miracles here today. Bathrooms are spotless. Very friendly too.',
   },
 ] satisfies Array<{
   authorName: string
@@ -223,7 +223,7 @@ function HomePage() {
           <div className="review-side">
             <p className="eyebrow">Google reviews</p>
             <h2>Loved by busy<br /><em>local households.</em></h2>
-            <div className="review-stat"><strong className="google-rating">5.0 ★ (6 Google reviews)</strong></div>
+            <div className="review-stat"><strong className="google-rating">5.0 ★ (8 Google reviews)</strong></div>
             <div className="review-stat"><strong>100%</strong><span>Insured &amp; Vetted</span></div>
             <a className="button button-dark google-reviews-link" href={googleReviewsUrl} target="_blank" rel="noreferrer">READ ALL REVIEWS ON GOOGLE <ArrowRight size={17} /></a>
             <small className="google-attribution">Reviews provided by Google Maps</small>
