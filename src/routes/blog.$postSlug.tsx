@@ -5,6 +5,14 @@ import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
 import { getBlogPost } from '../data/blog'
 
+function renderParagraph(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g)
+  return parts.map((part, index) => {
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    return link ? <a key={`${link[2]}-${index}`} href={link[2]}>{link[1]}</a> : part
+  })
+}
+
 export const Route = createFileRoute('/blog/$postSlug')({
   component: BlogPostPage,
   head: ({ params }) => {
@@ -83,7 +91,7 @@ function BlogPostPage() {
                 const id = section.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
                 return <section id={id} key={section.heading}>
                   <h2>{section.heading}</h2>
-                  {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  {section.paragraphs.map((paragraph) => <p key={paragraph}>{renderParagraph(paragraph)}</p>)}
                   {section.tips && <ul>{section.tips.map((tip) => <li key={tip}>{tip}</li>)}</ul>}
                 </section>
               })}

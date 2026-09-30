@@ -18,6 +18,19 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ServiceSlugRouteImport } from './routes/$serviceSlug'
 import { Route as ServiceAreasRouteImport } from './routes/service-areas'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogPostSlugRouteImport } from './routes/blog.$postSlug'
+
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogPostSlugRoute = BlogPostSlugRouteImport.update({
+  id: '/blog/$postSlug',
+  path: '/blog/$postSlug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
@@ -75,6 +88,8 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/$serviceSlug': typeof ServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blog/$postSlug': typeof BlogPostSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +101,8 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/$serviceSlug': typeof ServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blog/$postSlug': typeof BlogPostSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,14 +115,16 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/$serviceSlug': typeof ServiceSlugRoute
   '/service-areas': typeof ServiceAreasRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blog/$postSlug': typeof BlogPostSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/$serviceSlug' | '/blog/' | '/blog/$postSlug'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/$serviceSlug'
+    '/' | '/about' | '/apply' | '/book-now' | '/faq' | '/privacy' | '/terms' | '/service-areas' | '/$serviceSlug' | '/blog/' | '/blog/$postSlug'
   id:
     | '__root__'
     | '/'
@@ -117,6 +136,8 @@ export interface FileRouteTypes {
     | '/terms'
     | '/$serviceSlug'
     | '/service-areas'
+    | '/blog/'
+    | '/blog/$postSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -129,6 +150,8 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   ServiceSlugRoute: typeof ServiceSlugRoute
   ServiceAreasRoute: typeof ServiceAreasRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  BlogPostSlugRoute: typeof BlogPostSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -196,6 +219,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiceAreasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$postSlug': {
+      id: '/blog/$postSlug'
+      path: '/blog/$postSlug'
+      fullPath: '/blog/$postSlug'
+      preLoaderRoute: typeof BlogPostSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -209,6 +246,8 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   ServiceSlugRoute: ServiceSlugRoute,
   ServiceAreasRoute: ServiceAreasRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  BlogPostSlugRoute: BlogPostSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

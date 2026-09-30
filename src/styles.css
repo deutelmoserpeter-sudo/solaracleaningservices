@@ -552,6 +552,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .blog-card-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: start; gap: clamp(30px, 5vw, 74px); }
 .blog-card { border: 2px solid var(--ink); background: var(--white); box-shadow: 11px 11px 0 var(--ink); }
 .blog-card-2 { margin-top: 95px; }
+.blog-card:nth-child(4) { margin-top: 95px; }
 .blog-card-image { display: block; overflow: hidden; }
 .blog-card-image img { width: 100%; height: 330px; object-fit: cover; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
 .blog-card:hover .blog-card-image img { transform: scale(1.035); }
@@ -581,6 +582,9 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .article-body > section { padding: 0 0 54px; margin: 0 0 54px; border-bottom: 1px solid var(--line); scroll-margin-top: 35px; }
 .article-body h2 { margin: 0 0 24px; font-family: var(--display); font-size: clamp(36px, 4vw, 54px); line-height: 1.05; text-transform: uppercase; }
 .article-body p { margin: 0 0 20px; font-size: 17px; line-height: 1.85; }
+.article-body p a { color: var(--palm-dark); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.article-body p a:hover { color: var(--coral); }
+.article-body p a:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
 .article-body ul { margin: 26px 0 0; padding: 0; display: grid; gap: 11px; list-style: none; }
 .article-body li { position: relative; padding: 14px 18px 14px 45px; border-left: 3px solid var(--palm-dark); background: var(--paper); font-size: 15px; line-height: 1.55; }
 .article-body li::before { content: '✓'; position: absolute; top: 14px; left: 18px; font-weight: 900; }
@@ -846,6 +850,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
   .blog-feature article h2 { font-size: 42px; }
   .blog-card-grid { grid-template-columns: 1fr; }
   .blog-card-2 { margin-top: 0; }
+  .blog-card:nth-child(4) { margin-top: 0; }
   .blog-card-image img { height: 250px; }
   .blog-card > div { padding: 26px 22px 30px; }
   .blog-cta { padding: 70px 24px; grid-template-columns: 1fr; gap: 27px; }
