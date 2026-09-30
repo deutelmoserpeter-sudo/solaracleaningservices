@@ -17,7 +17,7 @@ export function SiteFooter({ commercial = false }: SiteFooterProps) {
       <div className="footer-links"><h3>Explore</h3><a href="/#services">Cleaning services</a><a href="/service-areas">Service areas</a><a href="/about">Our approach</a><a href="/blog/">Blog</a><a href="/faq">Cleaning FAQ</a></div>
       <div className="footer-links"><h3>Say hello</h3><a href="tel:+17275948636">(727) 594-8636</a><a href="mailto:hello@solaracleaningfl.com">hello@solaracleaningfl.com</a><span>Office Hours: 8AM - 6PM</span><span>Serving Pinellas County</span></div>
       <div className="cleaner-callout">
-        <div><h3>Become a Cleaner</h3><p>Looking for flexible cleaning work? Work with us to provide professional cleaning services across Pinellas County.</p></div>
+        <div><h3>Become a Cleaner</h3><p>Looking for flexible cleaning work across Pinellas County? Join our team.</p></div>
         <Link className="button cleaner-button" to="/apply">Apply Now <ArrowRight size={17} /></Link>
       </div>
       <div className="footer-bottom"><span>© 2026 Solara Cleaning Services</span><div className="footer-legal"><Link to="/privacy">Privacy Policy</Link><Link to="/terms">Terms of Service</Link></div><span>Insured · Detail obsessed · Locally loved</span></div>
