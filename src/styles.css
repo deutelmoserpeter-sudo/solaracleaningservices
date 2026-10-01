@@ -316,7 +316,7 @@ footer { padding: 75px clamp(24px, 7vw, 120px) 28px; display: grid; grid-templat
 .promo-copy > span { margin-top: 8px; display: block; font-size: 12px; line-height: 1.45; }
 .promo-link { grid-column: 1 / -1; min-height: 48px; padding: 0 17px; display: flex; align-items: center; justify-content: space-between; border: 2px solid var(--ink); background: var(--sun); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: background .2s ease, transform .2s ease; }
 .promo-link:hover { background: var(--pink); transform: translateY(-2px); }
-.promo-link { width: 100%; cursor: pointer; }
+.promo-link { width: 100%; color: var(--ink); cursor: pointer; }
 .promo-link:disabled { cursor: wait; opacity: .65; transform: none; }
 .promo-form, .promo-success { grid-column: 1 / -1; display: grid; gap: 12px; }
 .promo-form .promo-copy { padding-right: 28px; }
