@@ -91,7 +91,7 @@ export function PromoPopup() {
         <form className="promo-form" name="promo-claim" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={claimOffer}>
           <input type="hidden" name="form-name" value="promo-claim" />
           <p className="form-honeypot"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-          <div className="promo-copy"><p>Claim your offer</p><h2>Where should we send it?</h2><span>Enter your details and we’ll email your Welcome25 coupon.</span></div>
+          <div className="promo-copy"><p>Claim your offer</p><h2>Where should we send it?</h2><span>Enter your details to receive your coupon.</span></div>
           <label>Full name<input name="name" type="text" autoComplete="name" required /></label>
           <label>Email address<input name="email" type="email" autoComplete="email" required /></label>
           <label>Phone number<input name="phone" type="tel" autoComplete="tel" required /></label>
