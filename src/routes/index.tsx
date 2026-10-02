@@ -223,7 +223,7 @@ function HomePage() {
           <div className="review-side">
             <p className="eyebrow">Google reviews</p>
             <h2>Loved by busy<br /><em>local households.</em></h2>
-            <div className="review-stat"><strong className="google-rating">5.0 ★ (8 Google reviews)</strong></div>
+            <div className="review-stat"><strong className="google-rating">5.0 ★ (10 Google reviews)</strong></div>
             <div className="review-stat"><strong>100%</strong><span>Insured &amp; Vetted</span></div>
             <a className="button button-dark google-reviews-link" href={googleReviewsUrl} target="_blank" rel="noreferrer">READ ALL REVIEWS ON GOOGLE <ArrowRight size={17} /></a>
             <small className="google-attribution">Reviews provided by Google Maps</small>
