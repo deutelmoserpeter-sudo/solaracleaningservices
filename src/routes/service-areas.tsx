@@ -6,7 +6,7 @@ import { SiteHeader } from '../components/SiteHeader'
 import { SunMark } from '../components/SunMark'
 import { services } from '../data/services'
 
-const pageDescription = 'Find Solara house cleaning in St. Petersburg, Gulfport, nearby beaches, and southern Pinellas County. Check availability for your home and book online.'
+const pageDescription = 'Explore Solara’s cleaning service areas, from St. Petersburg and Gulfport to Seminole, Largo, and the Gulf beaches. Check your ZIP code for availability.'
 
 export const Route = createFileRoute('/service-areas')({
   component: ServiceAreasPage,

@@ -5,7 +5,7 @@ import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
 import { SunMark } from '../components/SunMark'
 
-const pageDescription = 'Meet Solara Cleaning Services, a family-owned company in Pinellas County. Learn how our insured team makes home cleaning simple, personal, and reliable.'
+const pageDescription = 'Discover the people and values behind Solara Cleaning Services in St. Petersburg: thoughtful home care, trusted cleaners, and attention to every detail.'
 
 export const Route = createFileRoute('/about')({
   component: AboutPage,
