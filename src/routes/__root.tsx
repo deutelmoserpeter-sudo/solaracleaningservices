@@ -9,7 +9,7 @@ export const Route = createRootRoute({
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { title: 'Solara Cleaning Services | A Cleaner Home, A Brighter Day' },
-      { name: 'description', content: 'Solara Cleaning Services offers recurring, deep, and move-in or move-out house cleaning in St. Petersburg and Pinellas County. Get a quote online.' },
+      { name: 'description', content: 'Enjoy a cleaner home with Solara Cleaning Services in St. Petersburg and Pinellas County. Book recurring, deep, or move-in and move-out cleaning online.' },
       { name: 'theme-color', content: '#0f4c34' },
       { property: 'og:site_name', content: 'Solara Cleaning Services' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
