@@ -5,14 +5,17 @@ import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
 import { SunMark } from '../components/SunMark'
 
+const pageDescription = 'Get to know Solara, a family-owned cleaning company in St. Petersburg, FL. Our vetted, insured team brings reliable service and genuine care to your home.'
+
 export const Route = createFileRoute('/about')({
   component: AboutPage,
   head: () => ({
     meta: [
       { title: 'About Solara Cleaning Services | St. Petersburg, FL' },
-      { name: 'description', content: 'Meet Solara Cleaning Services, a local team providing thoughtful residential cleaning for homes across St. Petersburg, Florida.' },
+      { name: 'description', content: pageDescription },
       { property: 'og:title', content: 'About Solara Cleaning Services | St. Petersburg, FL' },
-      { property: 'og:description', content: 'Meet the local Solara team providing thoughtful residential cleaning across St. Petersburg, Florida.' },
+      { property: 'og:description', content: pageDescription },
+      { name: 'twitter:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/about' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },

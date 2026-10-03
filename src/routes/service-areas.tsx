@@ -6,14 +6,17 @@ import { SiteHeader } from '../components/SiteHeader'
 import { SunMark } from '../components/SunMark'
 import { services } from '../data/services'
 
+const pageDescription = 'Find Solara house cleaning in St. Petersburg, Gulfport, nearby beaches, and southern Pinellas County. Check availability for your home and book online.'
+
 export const Route = createFileRoute('/service-areas')({
   component: ServiceAreasPage,
   head: () => ({
     meta: [
       { title: 'House Cleaning in St. Petersburg & Nearby Beaches | Solara' },
-      { name: 'description', content: 'Solara provides house cleaning in St. Petersburg, Gulfport, St. Pete Beach, Treasure Island, Madeira Beach, Pinellas Park, Seminole, and Largo.' },
+      { name: 'description', content: pageDescription },
       { property: 'og:title', content: 'House Cleaning in St. Petersburg & Nearby Communities' },
-      { property: 'og:description', content: 'Professional home cleaning from St. Petersburg and Gulfport to the beaches, Pinellas Park, Seminole, and Largo.' },
+      { property: 'og:description', content: pageDescription },
+      { name: 'twitter:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/service-areas' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
@@ -27,7 +30,7 @@ const serviceAreas = ['St. Petersburg', 'Gulfport', 'St. Pete Beach', 'Treasure 
 function ServiceAreasPage() {
   const pageUrl = 'https://solaracleaningfl.com/service-areas'
   const schema = [
-    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'House Cleaning in St. Petersburg & Nearby Communities', url: pageUrl, description: 'Explore the St. Petersburg-area communities served by Solara Cleaning Services.' },
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'House Cleaning in St. Petersburg & Nearby Communities', url: pageUrl, description: pageDescription },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://solaracleaningfl.com/' },
       { '@type': 'ListItem', position: 2, name: 'Service Areas', item: pageUrl },
