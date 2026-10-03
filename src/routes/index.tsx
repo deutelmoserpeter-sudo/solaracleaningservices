@@ -40,9 +40,9 @@ export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
       { title: 'House Cleaning Services St. Petersburg, FL | Solara Cleaning' },
-      { name: 'description', content: 'Professional house cleaning in St. Petersburg, FL for a fresher home and more free time. Get an instant quote from Solara Cleaning Services.' },
+      { name: 'description', content: 'Solara Cleaning Services offers recurring, deep, and move-in or move-out house cleaning in St. Petersburg and Pinellas County. Get a quote online.' },
       { property: 'og:title', content: 'House Cleaning Services in St. Petersburg, FL | Solara' },
-      { property: 'og:description', content: 'Professional residential cleaning in St. Petersburg and nearby Pinellas County communities. Get an instant quote online.' },
+      { property: 'og:description', content: 'Solara Cleaning Services offers recurring, deep, and move-in or move-out house cleaning in St. Petersburg and Pinellas County. Get a quote online.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
@@ -235,7 +235,7 @@ function HomePage() {
             <p className="eyebrow light">Your fresh start</p>
             <h2>Tell us about<br /><em>your home.</em></h2>
             <p>Share a few details, then continue to our booking form with your selections already filled in.</p>
-            <div className="quote-contact">
+            <div className="quote-contact" data-nosnippet="">
               <span>Prefer to chat?</span>
               <a href="tel:+17275948636">(727) 594-8636</a>
               <a href="mailto:hello@solaracleaningfl.com">hello@solaracleaningfl.com</a>
