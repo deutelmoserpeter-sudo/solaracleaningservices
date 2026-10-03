@@ -15,6 +15,8 @@ import { SunMark } from '../components/SunMark'
 import { faqQuestions } from '../data/faqs'
 import { services } from '../data/services'
 
+const pageDescription = 'Solara Cleaning Services keeps homes fresh in Pinellas County. Choose recurring, deep, or move-out cleaning and get a free quote.'
+
 function ShieldHeartIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -40,9 +42,10 @@ export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
       { title: 'House Cleaning Services St. Petersburg, FL | Solara Cleaning' },
-      { name: 'description', content: 'Enjoy a cleaner home with Solara Cleaning Services in St. Petersburg and Pinellas County. Book recurring, deep, or move-in and move-out cleaning online.' },
+      { name: 'description', content: pageDescription },
       { property: 'og:title', content: 'House Cleaning Services in St. Petersburg, FL | Solara' },
-      { property: 'og:description', content: 'Enjoy a cleaner home with Solara Cleaning Services in St. Petersburg and Pinellas County. Book recurring, deep, or move-in and move-out cleaning online.' },
+      { property: 'og:description', content: pageDescription },
+      { name: 'twitter:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
