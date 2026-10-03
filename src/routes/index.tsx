@@ -40,9 +40,9 @@ export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
       { title: 'House Cleaning Services St. Petersburg, FL | Solara Cleaning' },
-      { name: 'description', content: 'Solara Cleaning Services offers recurring, deep, and move-in or move-out house cleaning in St. Petersburg and Pinellas County. Get a quote online.' },
+      { name: 'description', content: 'Enjoy a cleaner home with Solara Cleaning Services in St. Petersburg and Pinellas County. Book recurring, deep, or move-in and move-out cleaning online.' },
       { property: 'og:title', content: 'House Cleaning Services in St. Petersburg, FL | Solara' },
-      { property: 'og:description', content: 'Solara Cleaning Services offers recurring, deep, and move-in or move-out house cleaning in St. Petersburg and Pinellas County. Get a quote online.' },
+      { property: 'og:description', content: 'Enjoy a cleaner home with Solara Cleaning Services in St. Petersburg and Pinellas County. Book recurring, deep, or move-in and move-out cleaning online.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
