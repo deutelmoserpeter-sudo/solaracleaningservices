@@ -16,6 +16,230 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "how-to-remove-sticky-grease-from-kitchen-cabinets",
+    "title": "How to Remove Sticky Grease From Kitchen Cabinets?",
+    "excerpt": "Lift cooking residue from cabinet fronts with gentle tools and a method that protects the finish.",
+    "description": "Learn how to remove sticky grease from kitchen cabinets, choose finish-safe cleaners, avoid water damage, and prevent residue from returning.",
+    "category": "Kitchen care",
+    "image": "/images/blog/kitchen-deep-cleaning.jpg",
+    "imageAlt": "Kitchen with cabinets and counters ready for cleaning",
+    "sections": [
+      {
+        "heading": "Why cabinet grease feels sticky",
+        "paragraphs": [
+          "Tiny droplets of cooking oil settle on nearby cabinet doors, handles, and upper edges. Dust sticks to the film, and repeated cooking adds layers that a quick dry wipe may spread rather than remove. Cabinets near the stove often collect the most residue.",
+          "Treat the buildup as a cleaning problem with a finish-specific solution. Painted wood, laminate, veneer, and unfinished wood do not all tolerate the same products or amount of moisture."
+        ]
+      },
+      {
+        "heading": "Check the finish before choosing a cleaner",
+        "paragraphs": [
+          "Start with the cabinet manufacturer's care instructions. For a finish that permits it, use a small amount of mild dish soap diluted in warm water. Test a hidden spot and let it dry before treating the visible doors. If the finish is unknown, ask the installer or cabinet maker for guidance.",
+          "Avoid oven cleaner, abrasive powders, scouring pads, and strong solvents. Do not assume citrus degreasers, vinegar, or baking soda are safe for paint or wood coatings. An unfinished or deteriorating surface may need professional advice before wet cleaning."
+        ]
+      },
+      {
+        "heading": "Soften residue without soaking the door",
+        "paragraphs": [
+          "Remove loose dust with a soft cloth. Lightly dampen a microfiber cloth with the approved solution and wring it well. Wipe a small section, giving the cleaner only the contact time allowed by its instructions. Apply liquid to the cloth rather than spraying it into hinges, seams, or cabinet edges.",
+          "Use gentle repeated passes and switch to a clean part of the cloth as grease transfers. A soft detail brush may help around suitable handles, but keep moisture out of joints. Do not scrape with a blade or let a wet cloth sit on the finish."
+        ]
+      },
+      {
+        "heading": "Remove cleaner residue and dry promptly",
+        "paragraphs": [
+          "If the cleaner requires rinsing, wipe with a separate, barely damp cloth. Dry immediately with a soft towel, paying attention to lower edges and seams. Work one door at a time so water does not linger while you clean the rest of the kitchen.",
+          "If grease remains, repeat the gentle process or use a cabinet-approved degreaser exactly as labeled. Stop if paint transfers to the cloth, the surface becomes tacky, or the finish changes color or sheen. Those changes can indicate finish damage rather than leftover dirt."
+        ]
+      },
+      {
+        "heading": "Keep cooking buildup under control",
+        "paragraphs": [
+          "Wipe fresh splashes once surfaces are cool, and use the range hood as intended during cooking. Clean or replace its filters according to the appliance manual. Regularly cleaning handles and cabinet fronts reduces the chance of a thick sticky film developing.",
+          "For a whole-room routine, see our [kitchen deep-cleaning guide](/blog/how-to-deep-clean-your-kitchen-step-by-step/). When arranging [deep cleaning](/deep-cleaning/), mention greasy cabinet fronts and confirm whether cabinet interiors are a separate task."
+        ],
+        "tips": [
+          "Identify the finish first",
+          "Test a hidden spot and let it dry",
+          "Use a lightly damp cloth, not a soaked door",
+          "Dry edges and seams promptly",
+          "Stop if the finish changes"
+        ]
+      }
+    ],
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "readTime": "3 min read"
+  },
+  {
+    "slug": "how-to-remove-hard-water-spots-from-shower-glass",
+    "title": "How to Remove Hard Water Spots From Shower Glass?",
+    "excerpt": "Understand mineral deposits, choose a glass-safe treatment, and reduce the spotting that returns after showers.",
+    "description": "Remove hard water spots from shower glass with coating-aware cleaning, compatible mineral removers, careful rinsing, and daily water removal.",
+    "category": "Bathroom care",
+    "image": "/images/blog/bathroom-tile-grout.jpg",
+    "imageAlt": "Glass shower enclosure surrounded by bathroom tile",
+    "sections": [
+      {
+        "heading": "Identify mineral deposits and other haze",
+        "paragraphs": [
+          "Water can leave dissolved minerals on glass as it evaporates. The resulting white spots or cloudy film may also contain soap residue, so a single wipe with a general cleaner does not always clear the surface.",
+          "Some shower doors have protective coatings that require specific care. Check the door manufacturer's instructions before choosing a product. Permanent etching can resemble removable buildup; cleaning cannot always restore glass that has been damaged."
+        ]
+      },
+      {
+        "heading": "Protect the surfaces around the glass",
+        "paragraphs": [
+          "Choose a product labeled for your shower glass and coating. Many mineral removers are acidic, and overspray or runoff can damage marble, limestone, grout, metal finishes, or sealants. Check compatibility with everything the cleaner could touch.",
+          "Ventilate the room and use the protection specified on the label. Never mix a mineral remover or vinegar with bleach or another cleaner. Remove previous cleaning products as directed before starting a different treatment."
+        ]
+      },
+      {
+        "heading": "Treat a small area with a compatible remover",
+        "paragraphs": [
+          "Remove loose dirt and ordinary soap residue using the manufacturer's recommended routine. Then test the approved mineral remover in an inconspicuous area. Follow its application instructions and contact time; do not let it dry on the glass unless the label specifically allows it.",
+          "Use a soft cloth or a tool expressly approved for the door. Avoid steel wool, abrasive pads, and razor scraping unless the glass manufacturer specifies a safe method for that exact surface. Repeated gentle treatment is safer than forceful scrubbing."
+        ]
+      },
+      {
+        "heading": "Rinse, dry, and assess the result",
+        "paragraphs": [
+          "Rinse thoroughly as the product instructions require, including areas where runoff could collect. Remove excess water with a suitable squeegee and dry edges with a clean microfiber cloth. Evaluate the glass after it dries rather than judging through a film of water.",
+          "If approved cleaning leaves the same cloudy patch, stop escalating products. Ask the installer or a glass-care professional whether the marks are etched glass, coating wear, or another issue. Stronger acid is not a reliable repair for permanent damage."
+        ]
+      },
+      {
+        "heading": "Reduce new spots between cleanings",
+        "paragraphs": [
+          "Squeegee after each shower and use appropriate bathroom ventilation. Removing droplets before they dry reduces the minerals left behind. Follow any coating-maintenance instructions instead of applying an automotive water repellent or unapproved polish.",
+          "See our [bathroom tile and grout guide](/blog/how-to-clean-bathroom-tile-and-grout/) for surrounding surfaces. When booking [deep cleaning](/deep-cleaning/), describe the deposits and any special glass coating so the cleaning scope can be confirmed."
+        ],
+        "tips": [
+          "Check for a protective glass coating",
+          "Keep acidic runoff away from sensitive surfaces",
+          "Never mix cleaning products",
+          "Rinse and dry after treatment",
+          "Seek advice for persistent haze or etching"
+        ]
+      }
+    ],
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "readTime": "3 min read"
+  },
+  {
+    "slug": "why-baseboards-turn-black-near-air-vents-and-doorways",
+    "title": "Why Do Baseboards Turn Black Near Air Vents and Doorways?",
+    "excerpt": "Dark marks can come from dust, soot, scuffs, or moisture. Learn what to check before scrubbing or repainting.",
+    "description": "Explore common causes of black marks on baseboards near vents and doorways, safe cleaning methods, and when recurring stains need HVAC or moisture investigation.",
+    "category": "Home maintenance",
+    "image": "/images/blog/hardwood-floor-care.jpg",
+    "imageAlt": "Wood floors and staircase in a home interior",
+    "sections": [
+      {
+        "heading": "Airflow can concentrate dust along edges",
+        "paragraphs": [
+          "Air moving through a room carries fine particles. Those particles can settle along wall edges, gaps, doorways, and nearby trim, leaving dark lines over time. Similar dark lines on carpet edges are often called filtration soiling, but that term does not identify every mark on a painted baseboard.",
+          "A vent nearby is a clue about airflow, not proof that the HVAC system is the source. Household dust, tracked-in dirt, pet debris, and soot can all contribute. Look at the pattern and how quickly it returns before choosing a solution."
+        ]
+      },
+      {
+        "heading": "Consider scuffs, soot, and moisture",
+        "paragraphs": [
+          "At doorways, shoe contact, vacuum bumps, and furniture can leave localized black scuffs. Candle soot or cooking particles may collect more broadly on cooler surfaces or in areas with moving air. A damp patch, peeling paint, or musty smell raises a different concern.",
+          "You cannot identify mold or rule out a leak from color alone. If the trim is damp, swollen, soft, or repeatedly stained, investigate the moisture source rather than repeatedly washing or painting over it. Sudden unexplained soot warrants attention to potential combustion sources; a carbon monoxide alarm requires immediate emergency action."
+        ]
+      },
+      {
+        "heading": "Clean sound, dry trim gently",
+        "paragraphs": [
+          "On intact, dry trim, first remove loose dust with a soft brush attachment or microfiber cloth. For painted or finished baseboards that permit wet cleaning, test a mild, finish-compatible solution on a hidden area. Wipe with a lightly damp cloth, then dry the trim.",
+          "Do not soak the wall-floor joint or scrub until the paint wears away. Abrasive cleaning sponges can dull or remove paint, and scuffs may need a coating-specific method. Stop if the surface deteriorates or the discoloration appears to be within the material rather than on it."
+        ]
+      },
+      {
+        "heading": "Address recurring marks at their source",
+        "paragraphs": [
+          "Maintain HVAC filters according to the equipment instructions, using the specified type and replacement schedule. Keep return-air openings unobstructed. Clean accessible vent covers only using a safe procedure; do not insert tools into ducts or alter airflow to hide the marks.",
+          "If stains return quickly, document where they appear and contact an HVAC technician or an appropriate building professional. Air leaks, particle sources, and moisture problems need different remedies. Duct cleaning or a stronger cleaner is not automatically the answer."
+        ]
+      },
+      {
+        "heading": "Separate routine cleaning from repair",
+        "paragraphs": [
+          "Regular dusting can reduce surface buildup, but it cannot correct a leak, damaged finish, or combustion problem. Extensive suspected mold, contamination after flooding, and damaged materials require an assessment beyond ordinary household cleaning.",
+          "Our [home allergy cleaning guide](/blog/cleaning-tips-for-a-home-with-allergies/) covers practical dust control. Tell Solara about recurring stains when you [request a quote](/book-now), and confirm baseboard detailing in the agreed cleaning scope."
+        ],
+        "tips": [
+          "Note the location and speed of recurrence",
+          "Check for dampness and finish damage",
+          "Dry-dust before wiping",
+          "Follow the HVAC filter specification",
+          "Investigate recurring moisture or unexplained soot"
+        ]
+      }
+    ],
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "readTime": "3 min read"
+  },
+  {
+    "slug": "how-to-clean-fingerprints-from-stainless-steel-appliances",
+    "title": "How to Clean Fingerprints From Stainless Steel Appliances?",
+    "excerpt": "A gentle routine for smudges and streaks that accounts for brushed metal and fingerprint-resistant coatings.",
+    "description": "Clean fingerprints from stainless steel appliances using finish-approved products, soft cloths, grain-aware wiping, and careful drying without damaging coatings.",
+    "category": "Kitchen care",
+    "image": "/images/blog/refrigerator-cleaning.jpg",
+    "imageAlt": "Open refrigerator beside a kitchen sink",
+    "sections": [
+      {
+        "heading": "Check whether the surface is coated",
+        "paragraphs": [
+          "Stainless steel appliances can have brushed metal, black stainless finishes, or fingerprint-resistant coatings. A cleaner or polish suitable for bare stainless may be unsuitable for a coated door. Read the appliance manual before treating the finish.",
+          "Fingerprints are usually surface oils, so they often need only gentle cleaning. They do not call for an abrasive pad, a harsh degreaser, or a product designed to remove rust."
+        ]
+      },
+      {
+        "heading": "Start with a soft cloth and approved cleaner",
+        "paragraphs": [
+          "Remove crumbs and loose particles with a clean microfiber cloth. If the manufacturer allows it, use a lightly damp cloth with a small amount of mild dish-soap solution. Test any new product on an inconspicuous area first.",
+          "Apply the solution to the cloth rather than spraying directly at controls, seams, dispensers, or electrical openings. Follow product instructions for touchscreens and plastic trim separately; not every part of an appliance uses the same finish."
+        ]
+      },
+      {
+        "heading": "Wipe with the grain and dry",
+        "paragraphs": [
+          "On brushed stainless steel, follow the visible direction of the grain with light, even strokes. Use a separate lightly damp cloth to remove soap residue where the manual permits rinsing. Finish with a clean, dry microfiber cloth before water marks form.",
+          "If streaks remain, check whether the cloth is dirty or too much product was used. Repeat with a fresh cloth and the approved method instead of adding layers of polish. Hard-water residue may require a different manufacturer-approved treatment."
+        ]
+      },
+      {
+        "heading": "Avoid shortcuts that can mark the finish",
+        "paragraphs": [
+          "Skip steel wool, scouring powders, and abrasive pads. Do not default to bleach, glass cleaner containing ammonia, vinegar, or alcohol unless the appliance manufacturer approves that product for the exact finish. Never mix cleaners.",
+          "Use stainless-steel polish only when permitted and only as labeled. Household oils can leave an uneven film that attracts dust, and polishing cannot repair scratched metal or a damaged coating. Keep products away from food-contact areas unless specifically approved for that use."
+        ]
+      },
+      {
+        "heading": "Make touch-point cleaning a small routine",
+        "paragraphs": [
+          "Wipe handles and frequently touched door areas regularly with the approved method. Use clean cloths and dry the surface after cleaning. Removing fresh smudges gently is easier than letting fingerprints combine with cooking grease.",
+          "For shelves, seals, and safe food handling, see our [refrigerator deep-cleaning guide](/blog/how-to-deep-clean-your-refrigerator-inside-and-out/). Confirm appliance-exterior care and any interior add-ons when arranging [standard cleaning](/standard-cleaning/) or [deep cleaning](/deep-cleaning/)."
+        ],
+        "tips": [
+          "Identify coated versus bare stainless",
+          "Use a clean, soft cloth",
+          "Follow the grain on brushed finishes",
+          "Remove residue and dry promptly",
+          "Use polish only when the manual permits it"
+        ]
+      }
+    ],
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "readTime": "3 min read"
+  },
+  {
     slug: 'how-to-deep-clean-your-refrigerator-inside-and-out',
     title: 'How to Deep Clean Your Refrigerator Inside and Out',
     excerpt: 'A practical reset for shelves, drawers, seals, and exterior surfaces, with careful handling of food and appliance finishes.',
