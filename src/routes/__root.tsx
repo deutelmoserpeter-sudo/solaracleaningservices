@@ -12,6 +12,7 @@ export const Route = createRootRoute({
       { name: 'description', content: 'Solara Cleaning Services keeps homes fresh in Pinellas County. Choose recurring, deep, or move-out cleaning and get a free quote.' },
       { name: 'theme-color', content: '#0f4c34' },
       { property: 'og:site_name', content: 'Solara Cleaning Services' },
+      { name: 'thumbnail', content: 'https://solaracleaningfl.com/images/solara-search-logo.png' },
       { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-search-logo.png' },
       { property: 'og:image:url', content: 'https://solaracleaningfl.com/images/solara-search-logo.png' },
       { property: 'og:image:secure_url', content: 'https://solaracleaningfl.com/images/solara-search-logo.png' },
