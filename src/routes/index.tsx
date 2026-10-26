@@ -48,7 +48,7 @@ export const Route = createFileRoute('/')({
       { name: 'twitter:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-search-logo.png' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-thumbnail-green.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/' }],
   }),
@@ -104,8 +104,8 @@ function HomePage() {
         '@id': 'https://solaracleaningfl.com/#business',
         name: 'Solara Cleaning Services',
         url: 'https://solaracleaningfl.com/',
-        logo: 'https://solaracleaningfl.com/images/solara-search-logo.png',
-        image: 'https://solaracleaningfl.com/images/solara-search-logo.png',
+        logo: 'https://solaracleaningfl.com/images/solara-thumbnail-green.png',
+        image: 'https://solaracleaningfl.com/images/solara-thumbnail-green.png',
         telephone: '+1-727-594-8636',
         email: 'hello@solaracleaningfl.com',
         description: 'Professional residential and small-office cleaning serving St. Petersburg and surrounding areas in Pinellas County, Florida.',
@@ -228,7 +228,7 @@ function HomePage() {
           <div className="review-side">
             <p className="eyebrow">Google reviews</p>
             <h2>Loved by busy<br /><em>local households.</em></h2>
-            <div className="review-stat"><strong className="google-rating">5.0 ★ (10 Google reviews)</strong></div>
+            <div className="review-stat"><strong className="google-rating">5.0 ★ (21 Google reviews)</strong></div>
             <div className="review-stat"><strong>100%</strong><span>Insured &amp; Vetted</span></div>
             <a className="button button-dark google-reviews-link" href={googleReviewsUrl} target="_blank" rel="noreferrer">READ ALL REVIEWS ON GOOGLE <ArrowRight size={17} /></a>
             <small className="google-attribution">Reviews provided by Google Maps</small>

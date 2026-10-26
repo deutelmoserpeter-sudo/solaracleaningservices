@@ -18,7 +18,7 @@ export const Route = createFileRoute('/about')({
       { name: 'twitter:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/about' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/social-share-logo.png' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-thumbnail-green.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/about' }],
   }),
