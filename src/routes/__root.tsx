@@ -26,8 +26,8 @@ export const Route = createRootRoute({
       { name: 'twitter:image:alt', content: 'Solara Cleaning Services logo' },
     ],
     links: [
-      { rel: 'icon', href: '/images/solara-thumbnail-logo.png', type: 'image/png', sizes: '1254x1254' },
-      { rel: 'shortcut icon', href: '/images/solara-thumbnail-logo.png' },
+      { rel: 'icon', href: '/favicon.svg?v=sun-restored', type: 'image/svg+xml' },
+      { rel: 'shortcut icon', href: '/favicon.ico?v=sun-restored' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Yellowtail&display=swap' },
