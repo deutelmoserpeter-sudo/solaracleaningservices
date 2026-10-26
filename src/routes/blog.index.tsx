@@ -15,7 +15,7 @@ export const Route = createFileRoute('/blog/')({
       { property: 'og:description', content: 'Practical cleaning guides for brighter, easier-to-maintain homes in St. Petersburg and Pinellas County.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/blog/' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-thumbnail-green.png' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-thumbnail-logo.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/blog/' }],
   }),

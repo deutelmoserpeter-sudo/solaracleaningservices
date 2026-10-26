@@ -19,7 +19,7 @@ export const Route = createFileRoute('/service-areas')({
       { name: 'twitter:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://solaracleaningfl.com/service-areas' },
-      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-thumbnail-green.png' },
+      { property: 'og:image', content: 'https://solaracleaningfl.com/images/solara-thumbnail-logo.png' },
     ],
     links: [{ rel: 'canonical', href: 'https://solaracleaningfl.com/service-areas' }],
   }),
