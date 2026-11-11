@@ -1,6 +1,5 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 
-import { PromoPopup } from '../components/PromoPopup'
 import '../styles.css'
 
 export const Route = createRootRoute({
@@ -41,7 +40,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head><HeadContent /></head>
-      <body>{children}<PromoPopup /><Scripts /></body>
+      <body>{children}<Scripts /></body>
     </html>
   )
 }
