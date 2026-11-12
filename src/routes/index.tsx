@@ -136,7 +136,7 @@ function HomePage() {
             <span className="mobile-home-rays" aria-hidden="true" />
             <h1 id="hero-title">A cleaner home.<br /><em>A brighter day.</em></h1>
             <p className="hero-intro">
-              Soak up the sunshine. Leave the scrubbing to us. Our trusted cleaners keep your home fresh and welcoming, giving you more time to enjoy what matters.
+              Proudly serving Pinellas County. Our trusted cleaners keep your home fresh and welcoming, giving you more time to enjoy what matters.
             </p>
             <TrustFeatures />
           </div>
